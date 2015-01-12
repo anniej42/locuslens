@@ -1,0 +1,127 @@
+<!-- <!DOCTYPE HTML>
+<html>
+<head>
+
+	<title>Locus Lens</title> -->
+
+	<link rel="apple-touch-startup-image" href="/startup.jpg">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- </head>
+<body>
+	
+	hi asdfasfdsdf
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html manifest="/projects/workouts/app.manifest">
+    <head>
+    <title>Locus Lens</title>
+        <script>
+       
+            var template;
+
+            template = "   <div class='inner'>\n        <i class='ion-refreshing'></i>\n        <h1>Updating...</h1>\n        <h3><span id='update-percent'>0</span></h3>\n    </div>\n";
+
+            if (document.cookie.indexOf('hasRunPreviously=') > -1) {
+                window.applicationCache.addEventListener('updateready', function() {
+                    document.getElementById('update-percent').innerHTML = "Reloading...";
+                    //window.applicationCache.swapCache();
+                    return window.location.reload();
+                });
+                window.applicationCache.addEventListener('downloading', function(e) {
+                    var updElement = document.createElement("div")
+                    updElement.id = 'updating'
+                    updElement.innerHTML = template
+                    return document.body.appendChild(updElement);
+                }, false);
+                window.applicationCache.addEventListener('cached', function(e) {
+                    var el = document.getElementById('updating');
+                    el.parentNode.removeChild(el);
+                }, false);
+                window.applicationCache.addEventListener('progress', function(e) {
+                    var percent = "Please wait..."
+                    if (e.loaded >= 0 && e.total >= 0) {
+                        percent = (Math.round(e.loaded / e.total) * 100) + "%";
+                    }
+                    return document.getElementById('update-percent').innerHTML = percent;
+                    if (percent == 100) {
+                        setTimeout(function() {
+                            document.getElementById('update-percent').innerHTML = "Please wait..."
+                        },750)
+                    }
+
+                }, false);
+
+                window.applicationCache.addEventListener('error', function(e) {
+                    var el = document.getElementById('updating');
+                    if (el) el.parentNode.removeChild(el);
+                }, false);
+            }
+
+            if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+                window.applicationCache.swapCache();
+                window.location.reload();
+            } else if (window.applicationCache.status != 0) {
+                try {
+                    window.applicationCache.update();
+                } catch (err) {
+
+                }
+            }
+
+
+        </script>
+        
+        <!--<script type="text/javascript" src="//typeface.nytimes.com/syq3eqa.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
+        <link rel='stylesheet' href='http://typeface.nytimes.com/k/syq3eqa-d.css?3bb2a6e53c9684ffdc9a99fe1f5b2a62920dbfeef30884e5e6cc753ade5fe629c5db4be8b4a51314058a86b58d44bbd0f38fa4a3809209b593bafac3fe581a76e0e8f3088d7caf26a5111076396ad0978f6adaae499c8b8d34f0f608f1732b4c61bda50b36cec7e7234acbc5206dea81c3b7e232e80639eccd1d18455892fe3bbf2fe22a1a5a191cc76f8b07d32700f5df982245e4cf2fd2e2723b9907c9dfccff4ffa42f841b409a425a9b95c91df1bc5d69c1a8292d842064cb60f5b8ecae9e9dee7e26b7655d4697bb1cbe7fd9c9aec3ed4dab2ca9f92d7ecaf41fd3db034cc02f52f924e7cc19c59b7a16831e5cfaea2c41efe2bb8594363914b10491bc33de273b7d3ef8db72e4873de2eadb7fafb82ad473b5acf5756b85f82d0b487513d4e9392bb75940dea2782910bbbdc0e0d449b6e110712ee5c9d1fdef6692e677631dd9ec6f61c5ac8b249277dfb9b445eb32932901c8a8fa44248a2a96f923bd068187b9ca7e66320e272212f25302c4d5698ab14abdc391cd168a89f8b33f34c' type='text/css'/>
+        <link rel='apple-touch-icon' sizes='120x120' href='apple-touch-icon.png'>
+		<link rel='icon' sizes='120x120' href='apple-touch-icon.png'>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1">
+
+<meta name="description" content="The New York Times is now offering a free mobile app for the popular Scientific 7-Minute Workout and the new Advanced 7-Minute Workout.">
+
+
+<!-- <meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@nytimeswell" />
+<meta name="twitter:title" content="Well Workouts" />
+<meta name="twitter:description" content="The New York Times is now offering a free mobile app for the popular Scientific 7-Minute Workout and the new Advanced 7-Minute Workout." />
+<meta name="twitter:image" content="http://graphics8.nytimes.com/images/2014/10/23/health/wellworkout_promoapp/wellworkout_promoapp-thumbLarge.png" />
+<meta name="twitter:url" content="http://well.blogs.nytimes.com/projects/workouts/" />
+ -->
+
+<meta property="og:type"            content="article" /> 
+<meta property="og:url"             content="https://well.blogs.nytimes.com/projects/workouts/" /> 
+<meta property="og:title"           content="Locus Lens" /> 
+<meta property="og:image"           content="http://graphics8.nytimes.com/images/2014/10/23/health/wellworkout_promoapp/wellworkout_promoapp-articleLarge.png" />
+    </head>
+    <body>
+        <script>
+            if (window.devicePixelRatio && devicePixelRatio >= 2) {
+                var testElem = document.createElement('div');
+                testElem.style.border = '.5px solid transparent';
+                document.body.appendChild(testElem);
+                if (testElem.offsetHeight == 1)
+                {
+                    document.querySelector('html').classList.add('supports-hairlines');
+                }
+                document.body.removeChild(testElem);
+            }
+        </script>
+        <div id='not-supported'>
+        <p>Sorry, Well Workouts requires iOS 7 or greater, the Android Chrome browser, or Internet Explorer 11. <span class='desktop'>Try going to www.nytimes.com/7-minute-workout on your phone.</span></p>
+        </div>
+    <div id='container'>
+    </div>
+    <script>window.rootPath = '/projects/workouts'; window.assetServer = 'http://int.nyt.com/applications/well_workout';</script><script src='http://int.nyt.com/applications/well_workout/js/main-8a4b76e28f46c113976ba292f66302cd8411a015.js' async></script>
+
+    </body>
+</html>
