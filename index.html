@@ -1,127 +1,168 @@
-<!-- <!DOCTYPE HTML>
-<html>
-<head>
-
-	<title>Locus Lens</title> -->
-
-	<link rel="apple-touch-startup-image" href="/startup.jpg">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-<!-- </head>
-<body>
-	
-	hi asdfasfdsdf
-</body>
-</html> -->
-
-
-
 <!DOCTYPE html>
-<html manifest="/projects/workouts/app.manifest">
-    <head>
+<html>
+  <head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!-- <script src="lib/handlebars.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.6.2/semantic.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.6.2/semantic.min.css"></script> -->
+
     <title>Locus Lens</title>
-        <script>
-       
-            var template;
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    
+    <!-- Set the viewport to show the page at a scale of 1.0, and make it non-scalable -->
+    <meta name="viewport" content="initial-scale=1">
+    
+    <!-- Make it fullscreen / hide the browser URL bar -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <!--
+        Give the status bar another colour
+        Valid values for "content" are: "default" (white), "black" and "black-translucent"
+        If set to "default" or "black", the content is displayed below the status bar. If set to
+        "black-translucent", the content is displayed under the bar.
+    -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no">
 
-            template = "   <div class='inner'>\n        <i class='ion-refreshing'></i>\n        <h1>Updating...</h1>\n        <h3><span id='update-percent'>0</span></h3>\n    </div>\n";
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    
+    <!--
+        Add a splash screen / startup image.
+        Take note this file exactly needs to be 320x460 for iPhone or 1004x768 for iPad, and is a PNG file.
+        Also, this only works if "apple-mobile-web-app-capable" is set to "yes".
+    -->
+    <link rel="apple-touch-startup-image" href="/startup.png" />
+    
+    <!--
+        Prevent the user from elastic scrolling / rubber banding. Sadly, doesn't always work properly.
+        For a more solid solution, check out ScrollFix ( https://github.com/joelambert/ScrollFix )
+    -->
+    <script>
+    function BlockElasticScroll(event) {
+        event.preventDefault() ;
+    }
+    
+    // In JavaScript, you can use "window.navigator.standalone" to detect wether
+    // the page is being viewed on your website, or as a standalone application.
+    
+    // You can also the detect the device the user is using.
+    // var isIPhone = navigator.userAgent.indexOf("iPhone") != -1 ;
+    // var isIPod = navigator.userAgent.indexOf("iPod") != -1 ;
+    // var isIPad = navigator.userAgent.indexOf("iPad") != -1 ;
+    // var isIOs = isIPhone || isIPod || isIPad ;
+    
+    </script>
 
-            if (document.cookie.indexOf('hasRunPreviously=') > -1) {
-                window.applicationCache.addEventListener('updateready', function() {
-                    document.getElementById('update-percent').innerHTML = "Reloading...";
-                    //window.applicationCache.swapCache();
-                    return window.location.reload();
-                });
-                window.applicationCache.addEventListener('downloading', function(e) {
-                    var updElement = document.createElement("div")
-                    updElement.id = 'updating'
-                    updElement.innerHTML = template
-                    return document.body.appendChild(updElement);
-                }, false);
-                window.applicationCache.addEventListener('cached', function(e) {
-                    var el = document.getElementById('updating');
-                    el.parentNode.removeChild(el);
-                }, false);
-                window.applicationCache.addEventListener('progress', function(e) {
-                    var percent = "Please wait..."
-                    if (e.loaded >= 0 && e.total >= 0) {
-                        percent = (Math.round(e.loaded / e.total) * 100) + "%";
-                    }
-                    return document.getElementById('update-percent').innerHTML = percent;
-                    if (percent == 100) {
-                        setTimeout(function() {
-                            document.getElementById('update-percent').innerHTML = "Please wait..."
-                        },750)
-                    }
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
-                }, false);
+</head>
+<body ontouchmove="BlockElasticScroll(event);">
 
-                window.applicationCache.addEventListener('error', function(e) {
-                    var el = document.getElementById('updating');
-                    if (el) el.parentNode.removeChild(el);
-                }, false);
-            }
-
-            if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
-                window.applicationCache.swapCache();
-                window.location.reload();
-            } else if (window.applicationCache.status != 0) {
-                try {
-                    window.applicationCache.update();
-                } catch (err) {
-
-                }
-            }
-
-
-        </script>
-        
-        <!--<script type="text/javascript" src="//typeface.nytimes.com/syq3eqa.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
-        <link rel='stylesheet' href='http://typeface.nytimes.com/k/syq3eqa-d.css?3bb2a6e53c9684ffdc9a99fe1f5b2a62920dbfeef30884e5e6cc753ade5fe629c5db4be8b4a51314058a86b58d44bbd0f38fa4a3809209b593bafac3fe581a76e0e8f3088d7caf26a5111076396ad0978f6adaae499c8b8d34f0f608f1732b4c61bda50b36cec7e7234acbc5206dea81c3b7e232e80639eccd1d18455892fe3bbf2fe22a1a5a191cc76f8b07d32700f5df982245e4cf2fd2e2723b9907c9dfccff4ffa42f841b409a425a9b95c91df1bc5d69c1a8292d842064cb60f5b8ecae9e9dee7e26b7655d4697bb1cbe7fd9c9aec3ed4dab2ca9f92d7ecaf41fd3db034cc02f52f924e7cc19c59b7a16831e5cfaea2c41efe2bb8594363914b10491bc33de273b7d3ef8db72e4873de2eadb7fafb82ad473b5acf5756b85f82d0b487513d4e9392bb75940dea2782910bbbdc0e0d449b6e110712ee5c9d1fdef6692e677631dd9ec6f61c5ac8b249277dfb9b445eb32932901c8a8fa44248a2a96f923bd068187b9ca7e66320e272212f25302c4d5698ab14abdc391cd168a89f8b33f34c' type='text/css'/>
-        <link rel='apple-touch-icon' sizes='120x120' href='apple-touch-icon.png'>
-		<link rel='icon' sizes='120x120' href='apple-touch-icon.png'>
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1">
-
-<meta name="description" content="The New York Times is now offering a free mobile app for the popular Scientific 7-Minute Workout and the new Advanced 7-Minute Workout.">
+    <h1>Locus Lens</h1>
+    <p>sdfaslkdfjas;l<br>
+    dfkjaw;lkfjas;df</p>
 
 
-<!-- <meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@nytimeswell" />
-<meta name="twitter:title" content="Well Workouts" />
-<meta name="twitter:description" content="The New York Times is now offering a free mobile app for the popular Scientific 7-Minute Workout and the new Advanced 7-Minute Workout." />
-<meta name="twitter:image" content="http://graphics8.nytimes.com/images/2014/10/23/health/wellworkout_promoapp/wellworkout_promoapp-thumbLarge.png" />
-<meta name="twitter:url" content="http://well.blogs.nytimes.com/projects/workouts/" />
- -->
+<div class="timelineCard">
+  <div class="mediaPhoto">
+    <span class="i-like-big"></span>
+    <div src="sample.jpg" class="mpFrame Frame Image" >
+    <div class="iImage" style="background-image:url(sample.jpg);"></div></div>
+  </div>
 
-<meta property="og:type"            content="article" /> 
-<meta property="og:url"             content="https://well.blogs.nytimes.com/projects/workouts/" /> 
-<meta property="og:title"           content="Locus Lens" /> 
-<meta property="og:image"           content="http://graphics8.nytimes.com/images/2014/10/23/health/wellworkout_promoapp/wellworkout_promoapp-articleLarge.png" />
-    </head>
-    <body>
-        <script>
-            if (window.devicePixelRatio && devicePixelRatio >= 2) {
-                var testElem = document.createElement('div');
-                testElem.style.border = '.5px solid transparent';
-                document.body.appendChild(testElem);
-                if (testElem.offsetHeight == 1)
-                {
-                    document.querySelector('html').classList.add('supports-hairlines');
-                }
-                document.body.removeChild(testElem);
-            }
-        </script>
-        <div id='not-supported'>
-        <p>Sorry, Well Workouts requires iOS 7 or greater, the Android Chrome browser, or Internet Explorer 11. <span class='desktop'>Try going to www.nytimes.com/7-minute-workout on your phone.</span></p>
+
+    <div class="timelineLikes"><a href="javascript:;" title="Toggle like" class="timelineLikeButton">
+    <span class="timelineLikeButtonAnimation" ></span ></a>
+
+      <div class="timelineLikeList">
+      <span class="LikeList">
+        <span></span>
+        <a class="llNameLink" href="/djustinserrano/">djustinserrano</a><span>, </span><a class="llNameLink" href="/brihunna/" >brihunna</a><span >, </span><a class="llNameLink" href="/telterman/" >telterman</a><span > and </span><span class="llRemainingCount" >9,953</span><span > others like this.
+
+        </span></span></div></div><div class="timelineComments" ><div class="timelineComment timelineCaption" ><a href="/thefatjewish/" ><div src="https://igcdn-photos-h-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-19/10903634_788697234517679_1855079012_a.jpg" class="timelineCommentAvatar Image" ><div class="iImage" style="background-image:url(https://igcdn-photos-h-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-19/10903634_788697234517679_1855079012_a.jpg);" ></div></div></a><a class="timelineCommentUsername" href="/thefatjewish/" >thefatjewish</a><span class="timelineCommentText" title="Edited" ><span >Ferris Bueller would be proud of this type of shit. WELL PLAYED GIRL.</span></span><a class="delete-comment" ></a></div>
+
+
+        <div class="scrollArea scrollAreaOpen scrollAreaInitialized" style="height: 132px;" ><div class="scrollAreaContents" ><div class="timelineComment timelineCommentMore" ><a class="timelineCommentText" ><span ><span ></span><span >1,439</span><span > more comments</span></span></a></div><div class="timelineComment" ><a href="/patrizioannibaldi/" ><div src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xpf1/t51.2885-19/10424371_1419204115026124_1583535338_a.jpg" class="timelineCommentAvatar Image" ><div class="iImage" style="background-image:url(https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xpf1/t51.2885-19/10424371_1419204115026124_1583535338_a.jpg);" ></div></div></a><a class="timelineCommentUsername" href="/patrizioannibaldi/" >patrizioannibaldi</a><span class="timelineCommentText" ><a href="/sbblondes/" >@sbblondes</a><span > tomorrow..</span></span><a class="delete-comment" ></a></div><div class="timelineComment" ><a href="/aida624/" ><div src="https://instagramimages-a.akamaihd.net/profiles/profile_1355676_75sq_1392951725.jpg" class="timelineCommentAvatar Image" ><div class="iImage" style="background-image:url(https://instagramimages-a.akamaihd.net/profiles/profile_1355676_75sq_1392951725.jpg);" ></div></div></a><a class="timelineCommentUsername" href="/aida624/" >aida624</a><span class="timelineCommentText" ><a href="/hyattrachel/" >@hyattrachel</a></span><a class="delete-comment" ></a></div><div class="timelineComment" ><a href="/astateofjames/" ><div src="https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xpa1/t51.2885-19/10424559_1439564472959816_672493670_a.jpg" class="timelineCommentAvatar Image" ><div class="iImage" style="background-image:url(https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xpa1/t51.2885-19/10424559_1439564472959816_672493670_a.jpg);" ></div></div></a><a class="timelineCommentUsername" href="/astateofjames/" >astateofjames</a><span class="timelineCommentText" ><a href="/itsmorganduhhhhhh/" >@itsmorganduhhhhhh</a></span><a class="delete-comment" ></a></div></div></div><div class="timelineCommentComposer" ><div style="width:24px;height:24px;" class="timelineCommentAvatar Image" ><div class="iImage" style="background-image:url(undefined);" ></div></div><div class="timelineCommentText" ><form class="timelineCommentForm" ><input type="text" placeholder="Write a comment..." class="fadedTextField timelineCommentTextField" ></form></div></div></div></div>
+
+    <!-- <div class="hidden templates"> -->
+      <!-- MEDIA TEMPLATE -->
+<!--       <div class="mediaTemplate">
+        <div class="ui segment wrap mediaWrapper" mediaId="{{{_id}}}">
+          <div class="ui red deleteMedia button" mediaId="{{{_id}}}">
+            Delete
+          </div>
+          <a class="ui {{fancybox}} wrap" rel="gallery" title="{{caption}}" href="#{{linkableId}}" mediaId="{{{_id}}}">
+            <img class="thumb vcentered" src="{{{url}}}" alt="image uploaded by {{{_owner}}}">
+
+          </a>
         </div>
-    <div id='container'>
-    </div>
-    <script>window.rootPath = '/projects/workouts'; window.assetServer = 'http://int.nyt.com/applications/well_workout';</script><script src='http://int.nyt.com/applications/well_workout/js/main-8a4b76e28f46c113976ba292f66302cd8411a015.js' async></script>
+      </div>
+     -->
+      <!-- COMMENT TEMPLATE -->
+<!--       <div class="commentTemplate">
+        <div class="comment wrapper" mediaId="{{{mediaId}}}" commentId="{{{_id}}}">
+          <div class="content">
+            <div class="fright">
+              <a class="author blue-text" href="{{{_owner}}}">
+                {{{owner}}}
+              </a>
+              <div class="ui label fright">
+                {{timestamp}}
+              </div>
+            </div>
+            <div class="text">
+              <div class="iconWrapper wrap">
+                <i class="ui hidden clickable red remove deleteComment icon" commentId="{{{_id}}}"></i>
+              </div>
+              {{content}}
+            </div>
+          </div>
+        </div>
+      </div>
 
-    </body>
+    </div> --> 
+
+<style type="text/css">
+  .timelineCard {
+    background: #fafafa;
+    border: 1px solid silver;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 16px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 1px 16px rgba(0,0,0,.1);
+    box-shadow: 0 1px 16px rgba(0,0,0,.1);
+    text-align: left;
+    width: 510px;
+}
+
+body {
+    line-height: 20px;
+    color: #222;
+    display: block;
+    position: relative;
+    font-size: 1.4rem;
+    font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.Image {
+overflow: hidden;
+position: relative;
+}
+
+.iImage{
+  height: 510px;
+  display:block;
+  position: absolute;;
+}
+
+.mediaPhoto{
+  height: 510px;
+}
+
+</style>
+
+</body>
 </html>

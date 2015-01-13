@@ -1,0 +1,767 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'bower',
+1 verbose cli   'yo',
+1 verbose cli   'gulp',
+1 verbose cli   'generator-mobileangularui' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose cache add [ 'bower', null ]
+5 verbose cache add name=undefined spec="bower" args=["bower",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'bower',
+6 verbose parsed url   path: 'bower',
+6 verbose parsed url   href: 'bower' }
+7 verbose cache add [ 'yo', null ]
+8 verbose cache add name=undefined spec="yo" args=["yo",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'yo',
+9 verbose parsed url   path: 'yo',
+9 verbose parsed url   href: 'yo' }
+10 verbose cache add [ 'gulp', null ]
+11 verbose cache add name=undefined spec="gulp" args=["gulp",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'gulp',
+12 verbose parsed url   path: 'gulp',
+12 verbose parsed url   href: 'gulp' }
+13 verbose cache add [ 'generator-mobileangularui', null ]
+14 verbose cache add name=undefined spec="generator-mobileangularui" args=["generator-mobileangularui",null]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: 'generator-mobileangularui',
+15 verbose parsed url   path: 'generator-mobileangularui',
+15 verbose parsed url   href: 'generator-mobileangularui' }
+16 silly lockFile 206e3ce5-bower bower
+17 verbose lock bower /Users/anniej/.npm/206e3ce5-bower.lock
+18 silly lockFile c41975d1-yo yo
+19 verbose lock yo /Users/anniej/.npm/c41975d1-yo.lock
+20 silly lockFile 9750c68d-gulp gulp
+21 verbose lock gulp /Users/anniej/.npm/9750c68d-gulp.lock
+22 silly lockFile 77e1e52c-generator-mobileangularui generator-mobileangularui
+23 verbose lock generator-mobileangularui /Users/anniej/.npm/77e1e52c-generator-mobileangularui.lock
+24 silly lockFile 206e3ce5-bower bower
+25 silly lockFile 206e3ce5-bower bower
+26 silly lockFile c41975d1-yo yo
+27 silly lockFile c41975d1-yo yo
+28 silly lockFile 9750c68d-gulp gulp
+29 silly lockFile 9750c68d-gulp gulp
+30 silly lockFile 77e1e52c-generator-mobileangularui generator-mobileangularui
+31 silly lockFile 77e1e52c-generator-mobileangularui generator-mobileangularui
+32 verbose addNamed [ 'bower', '' ]
+33 verbose addNamed [ null, '*' ]
+34 silly lockFile 1240aab1-bower bower@
+35 verbose lock bower@ /Users/anniej/.npm/1240aab1-bower.lock
+36 verbose addNamed [ 'yo', '' ]
+37 verbose addNamed [ null, '*' ]
+38 silly lockFile d937c28e-yo yo@
+39 verbose lock yo@ /Users/anniej/.npm/d937c28e-yo.lock
+40 verbose addNamed [ 'gulp', '' ]
+41 verbose addNamed [ null, '*' ]
+42 silly lockFile 72f4391e-gulp gulp@
+43 verbose lock gulp@ /Users/anniej/.npm/72f4391e-gulp.lock
+44 verbose addNamed [ 'generator-mobileangularui', '' ]
+45 verbose addNamed [ null, '*' ]
+46 silly lockFile cb51a578-generator-mobileangularui generator-mobileangularui@
+47 verbose lock generator-mobileangularui@ /Users/anniej/.npm/cb51a578-generator-mobileangularui.lock
+48 silly addNameRange { name: 'bower', range: '*', hasData: false }
+49 silly addNameRange { name: 'yo', range: '*', hasData: false }
+50 silly addNameRange { name: 'gulp', range: '*', hasData: false }
+51 silly addNameRange { name: 'generator-mobileangularui', range: '*', hasData: false }
+52 verbose request where is /bower
+53 verbose request registry https://registry.npmjs.org/
+54 verbose request id 06013f1e17649ce9
+55 verbose url raw /bower
+56 verbose url resolving [ 'https://registry.npmjs.org/', './bower' ]
+57 verbose url resolved https://registry.npmjs.org/bower
+58 verbose request where is https://registry.npmjs.org/bower
+59 info trying registry request attempt 1 at 15:08:17
+60 http GET https://registry.npmjs.org/bower
+61 verbose request where is /yo
+62 verbose request registry https://registry.npmjs.org/
+63 verbose url raw /yo
+64 verbose url resolving [ 'https://registry.npmjs.org/', './yo' ]
+65 verbose url resolved https://registry.npmjs.org/yo
+66 verbose request where is https://registry.npmjs.org/yo
+67 info trying registry request attempt 1 at 15:08:17
+68 http GET https://registry.npmjs.org/yo
+69 verbose request where is /gulp
+70 verbose request registry https://registry.npmjs.org/
+71 verbose url raw /gulp
+72 verbose url resolving [ 'https://registry.npmjs.org/', './gulp' ]
+73 verbose url resolved https://registry.npmjs.org/gulp
+74 verbose request where is https://registry.npmjs.org/gulp
+75 info trying registry request attempt 1 at 15:08:17
+76 http GET https://registry.npmjs.org/gulp
+77 verbose request where is /generator-mobileangularui
+78 verbose request registry https://registry.npmjs.org/
+79 verbose url raw /generator-mobileangularui
+80 verbose url resolving [ 'https://registry.npmjs.org/', './generator-mobileangularui' ]
+81 verbose url resolved https://registry.npmjs.org/generator-mobileangularui
+82 verbose request where is https://registry.npmjs.org/generator-mobileangularui
+83 info trying registry request attempt 1 at 15:08:17
+84 http GET https://registry.npmjs.org/generator-mobileangularui
+85 http 200 https://registry.npmjs.org/yo
+86 silly registry.get cb [ 200,
+86 silly registry.get   { date: 'Mon, 12 Jan 2015 20:08:17 GMT',
+86 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+86 silly registry.get     etag: '"792A0948RTAKQI9ZX8YBCZSWJ"',
+86 silly registry.get     'content-type': 'application/json',
+86 silly registry.get     'cache-control': 'max-age=60',
+86 silly registry.get     'content-length': '53612',
+86 silly registry.get     'accept-ranges': 'bytes',
+86 silly registry.get     via: '1.1 varnish',
+86 silly registry.get     age: '5',
+86 silly registry.get     'x-served-by': 'cache-iad2143-IAD',
+86 silly registry.get     'x-cache': 'HIT',
+86 silly registry.get     'x-cache-hits': '1',
+86 silly registry.get     'x-timer': 'S1421093297.625536,VS0,VE0',
+86 silly registry.get     vary: 'Accept',
+86 silly registry.get     'keep-alive': 'timeout=10, max=50',
+86 silly registry.get     connection: 'Keep-Alive' } ]
+87 silly addNameRange number 2 { name: 'yo', range: '*', hasData: true }
+88 silly addNameRange versions [ 'yo',
+88 silly addNameRange   [ '1.0.0-beta.1',
+88 silly addNameRange     '1.0.0-beta.2',
+88 silly addNameRange     '1.0.0-beta.3',
+88 silly addNameRange     '1.0.0-beta.4',
+88 silly addNameRange     '1.0.0-beta.5',
+88 silly addNameRange     '1.0.0-beta.6',
+88 silly addNameRange     '1.0.0-beta.7',
+88 silly addNameRange     '1.0.0-rc.1',
+88 silly addNameRange     '1.0.0-rc.1.1',
+88 silly addNameRange     '1.0.0-rc.1.2',
+88 silly addNameRange     '1.0.0-rc.1.3',
+88 silly addNameRange     '1.0.0-rc.1.4',
+88 silly addNameRange     '1.0.0',
+88 silly addNameRange     '1.0.1',
+88 silly addNameRange     '1.0.2',
+88 silly addNameRange     '1.0.3',
+88 silly addNameRange     '1.0.4',
+88 silly addNameRange     '1.0.5',
+88 silly addNameRange     '1.0.6',
+88 silly addNameRange     '1.0.7-pre.1',
+88 silly addNameRange     '1.0.7-pre.2',
+88 silly addNameRange     '1.0.7-pre.3',
+88 silly addNameRange     '1.1.0',
+88 silly addNameRange     '1.1.1',
+88 silly addNameRange     '1.1.2',
+88 silly addNameRange     '1.2.0',
+88 silly addNameRange     '1.2.1',
+88 silly addNameRange     '1.3.0',
+88 silly addNameRange     '1.3.2',
+88 silly addNameRange     '1.3.3' ] ]
+89 verbose addNamed [ 'yo', '1.3.3' ]
+90 verbose addNamed [ '1.3.3', '1.3.3' ]
+91 silly lockFile 68164736-yo-1-3-3 yo@1.3.3
+92 verbose lock yo@1.3.3 /Users/anniej/.npm/68164736-yo-1-3-3.lock
+93 silly lockFile f34d3fe9-gistry-npmjs-org-yo-yo-1-3-3-tgz https://registry.npmjs.org/yo/-/yo-1.3.3.tgz
+94 verbose lock https://registry.npmjs.org/yo/-/yo-1.3.3.tgz /Users/anniej/.npm/f34d3fe9-gistry-npmjs-org-yo-yo-1-3-3-tgz.lock
+95 verbose addRemoteTarball [ 'https://registry.npmjs.org/yo/-/yo-1.3.3.tgz',
+95 verbose addRemoteTarball   '732b053d6da401965ef146fe914d014474c37c1b' ]
+96 info retry fetch attempt 1 at 15:08:17
+97 verbose fetch to= /var/folders/bk/1z27ysln2_bby2dj532f9s200000gn/T/npm-1215-16_sELHO/registry.npmjs.org/yo/-/yo-1.3.3.tgz
+98 http GET https://registry.npmjs.org/yo/-/yo-1.3.3.tgz
+99 http 200 https://registry.npmjs.org/bower
+100 silly registry.get cb [ 200,
+100 silly registry.get   { date: 'Mon, 12 Jan 2015 20:08:17 GMT',
+100 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+100 silly registry.get     etag: '"232E5M840FMIC7FBPX3GZWKF1"',
+100 silly registry.get     'content-type': 'application/json',
+100 silly registry.get     'cache-control': 'max-age=60',
+100 silly registry.get     'content-length': '106011',
+100 silly registry.get     'accept-ranges': 'bytes',
+100 silly registry.get     via: '1.1 varnish',
+100 silly registry.get     age: '34',
+100 silly registry.get     'x-served-by': 'cache-iad2138-IAD',
+100 silly registry.get     'x-cache': 'HIT',
+100 silly registry.get     'x-cache-hits': '1',
+100 silly registry.get     'x-timer': 'S1421093297.626329,VS0,VE0',
+100 silly registry.get     vary: 'Accept',
+100 silly registry.get     'keep-alive': 'timeout=10, max=50',
+100 silly registry.get     connection: 'Keep-Alive' } ]
+101 silly addNameRange number 2 { name: 'bower', range: '*', hasData: true }
+102 silly addNameRange versions [ 'bower',
+102 silly addNameRange   [ '0.1.0',
+102 silly addNameRange     '0.1.2',
+102 silly addNameRange     '0.1.3',
+102 silly addNameRange     '0.2.0',
+102 silly addNameRange     '0.3.0',
+102 silly addNameRange     '0.3.1',
+102 silly addNameRange     '0.3.2',
+102 silly addNameRange     '0.4.0',
+102 silly addNameRange     '0.5.0',
+102 silly addNameRange     '0.5.1',
+102 silly addNameRange     '0.6.0',
+102 silly addNameRange     '0.6.1',
+102 silly addNameRange     '0.6.2',
+102 silly addNameRange     '0.6.3',
+102 silly addNameRange     '0.6.4',
+102 silly addNameRange     '0.6.5',
+102 silly addNameRange     '0.6.6',
+102 silly addNameRange     '0.6.7',
+102 silly addNameRange     '0.6.8',
+102 silly addNameRange     '0.7.0',
+102 silly addNameRange     '0.7.1',
+102 silly addNameRange     '0.8.0',
+102 silly addNameRange     '0.8.1',
+102 silly addNameRange     '0.8.2',
+102 silly addNameRange     '0.8.3',
+102 silly addNameRange     '0.8.4',
+102 silly addNameRange     '0.8.5',
+102 silly addNameRange     '0.8.6',
+102 silly addNameRange     '0.9.0',
+102 silly addNameRange     '0.9.1',
+102 silly addNameRange     '0.9.2',
+102 silly addNameRange     '0.10.0',
+102 silly addNameRange     '1.0.0',
+102 silly addNameRange     '1.0.1',
+102 silly addNameRange     '1.0.2',
+102 silly addNameRange     '1.0.3',
+102 silly addNameRange     '1.1.0',
+102 silly addNameRange     '1.1.1',
+102 silly addNameRange     '1.1.2',
+102 silly addNameRange     '1.2.0',
+102 silly addNameRange     '1.2.1',
+102 silly addNameRange     '1.2.2',
+102 silly addNameRange     '1.2.3',
+102 silly addNameRange     '1.2.4',
+102 silly addNameRange     '1.2.5',
+102 silly addNameRange     '1.2.6',
+102 silly addNameRange     '1.2.7',
+102 silly addNameRange     '1.2.8',
+102 silly addNameRange     '1.3.0',
+102 silly addNameRange     '1.3.1',
+102 silly addNameRange     '1.3.2',
+102 silly addNameRange     '1.3.3',
+102 silly addNameRange     '1.3.4',
+102 silly addNameRange     '1.3.5',
+102 silly addNameRange     '1.3.6',
+102 silly addNameRange     '1.3.7',
+102 silly addNameRange     '1.3.8',
+102 silly addNameRange     '1.3.9',
+102 silly addNameRange     '1.3.10',
+102 silly addNameRange     '1.3.11',
+102 silly addNameRange     '1.3.12' ] ]
+103 verbose addNamed [ 'bower', '1.3.12' ]
+104 verbose addNamed [ '1.3.12', '1.3.12' ]
+105 silly lockFile 9819431c-bower-1-3-12 bower@1.3.12
+106 verbose lock bower@1.3.12 /Users/anniej/.npm/9819431c-bower-1-3-12.lock
+107 silly lockFile b05fd70b-npmjs-org-bower-bower-1-3-12-tgz https://registry.npmjs.org/bower/-/bower-1.3.12.tgz
+108 verbose lock https://registry.npmjs.org/bower/-/bower-1.3.12.tgz /Users/anniej/.npm/b05fd70b-npmjs-org-bower-bower-1-3-12-tgz.lock
+109 verbose addRemoteTarball [ 'https://registry.npmjs.org/bower/-/bower-1.3.12.tgz',
+109 verbose addRemoteTarball   '37de0edb3904baf90aee13384a1a379a05ee214c' ]
+110 info retry fetch attempt 1 at 15:08:17
+111 verbose fetch to= /var/folders/bk/1z27ysln2_bby2dj532f9s200000gn/T/npm-1215-16_sELHO/registry.npmjs.org/bower/-/bower-1.3.12.tgz
+112 http GET https://registry.npmjs.org/bower/-/bower-1.3.12.tgz
+113 http 200 https://registry.npmjs.org/gulp
+114 silly registry.get cb [ 200,
+114 silly registry.get   { date: 'Mon, 12 Jan 2015 20:08:17 GMT',
+114 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+114 silly registry.get     etag: '"B6K3EV7AX9V37BUR3DG6TVNJE"',
+114 silly registry.get     'content-type': 'application/json',
+114 silly registry.get     'cache-control': 'max-age=60',
+114 silly registry.get     'content-length': '96981',
+114 silly registry.get     'accept-ranges': 'bytes',
+114 silly registry.get     via: '1.1 varnish',
+114 silly registry.get     age: '0',
+114 silly registry.get     'x-served-by': 'cache-iad2148-IAD',
+114 silly registry.get     'x-cache': 'HIT',
+114 silly registry.get     'x-cache-hits': '1',
+114 silly registry.get     'x-timer': 'S1421093297.625545,VS0,VE1',
+114 silly registry.get     vary: 'Accept',
+114 silly registry.get     'keep-alive': 'timeout=10, max=50',
+114 silly registry.get     connection: 'Keep-Alive' } ]
+115 silly addNameRange number 2 { name: 'gulp', range: '*', hasData: true }
+116 silly addNameRange versions [ 'gulp',
+116 silly addNameRange   [ '0.0.1',
+116 silly addNameRange     '0.0.2',
+116 silly addNameRange     '0.0.3',
+116 silly addNameRange     '0.0.4',
+116 silly addNameRange     '0.0.5',
+116 silly addNameRange     '0.0.7',
+116 silly addNameRange     '0.0.8',
+116 silly addNameRange     '0.0.9',
+116 silly addNameRange     '0.1.0',
+116 silly addNameRange     '0.2.0',
+116 silly addNameRange     '1.0.0',
+116 silly addNameRange     '1.1.0',
+116 silly addNameRange     '1.2.0',
+116 silly addNameRange     '1.2.1',
+116 silly addNameRange     '2.0.0',
+116 silly addNameRange     '2.0.1',
+116 silly addNameRange     '2.1.0',
+116 silly addNameRange     '2.2.0',
+116 silly addNameRange     '2.3.0',
+116 silly addNameRange     '2.4.0',
+116 silly addNameRange     '2.4.1',
+116 silly addNameRange     '2.6.0',
+116 silly addNameRange     '2.6.1',
+116 silly addNameRange     '2.7.0',
+116 silly addNameRange     '3.0.0',
+116 silly addNameRange     '3.1.1',
+116 silly addNameRange     '3.1.2',
+116 silly addNameRange     '3.1.3',
+116 silly addNameRange     '3.1.4',
+116 silly addNameRange     '3.2.0',
+116 silly addNameRange     '3.2.1',
+116 silly addNameRange     '3.2.2',
+116 silly addNameRange     '3.2.3',
+116 silly addNameRange     '3.2.4',
+116 silly addNameRange     '3.2.5',
+116 silly addNameRange     '3.3.0',
+116 silly addNameRange     '3.3.1',
+116 silly addNameRange     '3.3.2',
+116 silly addNameRange     '3.3.4',
+116 silly addNameRange     '3.4.0',
+116 silly addNameRange     '3.5.0',
+116 silly addNameRange     '3.5.1',
+116 silly addNameRange     '3.5.2',
+116 silly addNameRange     '3.5.5',
+116 silly addNameRange     '3.5.6',
+116 silly addNameRange     '3.6.0',
+116 silly addNameRange     '3.6.1',
+116 silly addNameRange     '3.6.2',
+116 silly addNameRange     '3.7.0',
+116 silly addNameRange     '3.8.0',
+116 silly addNameRange     '3.8.1',
+116 silly addNameRange     '3.8.2',
+116 silly addNameRange     '3.8.3',
+116 silly addNameRange     '3.8.4',
+116 silly addNameRange     '3.8.5',
+116 silly addNameRange     '3.8.6',
+116 silly addNameRange     '3.8.7',
+116 silly addNameRange     '3.8.8',
+116 silly addNameRange     '3.8.9',
+116 silly addNameRange     '3.8.10' ] ]
+117 verbose addNamed [ 'gulp', '3.8.10' ]
+118 verbose addNamed [ '3.8.10', '3.8.10' ]
+119 silly lockFile f843d0d7-gulp-3-8-10 gulp@3.8.10
+120 verbose lock gulp@3.8.10 /Users/anniej/.npm/f843d0d7-gulp-3-8-10.lock
+121 silly lockFile b3287162-y-npmjs-org-gulp-gulp-3-8-10-tgz https://registry.npmjs.org/gulp/-/gulp-3.8.10.tgz
+122 verbose lock https://registry.npmjs.org/gulp/-/gulp-3.8.10.tgz /Users/anniej/.npm/b3287162-y-npmjs-org-gulp-gulp-3-8-10-tgz.lock
+123 verbose addRemoteTarball [ 'https://registry.npmjs.org/gulp/-/gulp-3.8.10.tgz',
+123 verbose addRemoteTarball   'bfb8fc156be97820f02a7f8b3af61a86666f9e31' ]
+124 info retry fetch attempt 1 at 15:08:17
+125 verbose fetch to= /var/folders/bk/1z27ysln2_bby2dj532f9s200000gn/T/npm-1215-16_sELHO/registry.npmjs.org/gulp/-/gulp-3.8.10.tgz
+126 http GET https://registry.npmjs.org/gulp/-/gulp-3.8.10.tgz
+127 http 200 https://registry.npmjs.org/yo/-/yo-1.3.3.tgz
+128 silly lockFile f34d3fe9-gistry-npmjs-org-yo-yo-1-3-3-tgz https://registry.npmjs.org/yo/-/yo-1.3.3.tgz
+129 silly lockFile f34d3fe9-gistry-npmjs-org-yo-yo-1-3-3-tgz https://registry.npmjs.org/yo/-/yo-1.3.3.tgz
+130 silly lockFile 68164736-yo-1-3-3 yo@1.3.3
+131 silly lockFile 68164736-yo-1-3-3 yo@1.3.3
+132 silly lockFile d937c28e-yo yo@
+133 silly lockFile d937c28e-yo yo@
+134 http 200 https://registry.npmjs.org/bower/-/bower-1.3.12.tgz
+135 http 200 https://registry.npmjs.org/generator-mobileangularui
+136 silly registry.get cb [ 200,
+136 silly registry.get   { date: 'Mon, 12 Jan 2015 20:08:17 GMT',
+136 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+136 silly registry.get     etag: '"1PW6C3T1AHANN48OF1ZLLY8WJ"',
+136 silly registry.get     'content-type': 'application/json',
+136 silly registry.get     'cache-control': 'max-age=60',
+136 silly registry.get     'content-length': '15750',
+136 silly registry.get     'accept-ranges': 'bytes',
+136 silly registry.get     via: '1.1 varnish',
+136 silly registry.get     age: '0',
+136 silly registry.get     'x-served-by': 'cache-iad2128-IAD',
+136 silly registry.get     'x-cache': 'MISS',
+136 silly registry.get     'x-cache-hits': '0',
+136 silly registry.get     'x-timer': 'S1421093297.626501,VS0,VE352',
+136 silly registry.get     vary: 'Accept',
+136 silly registry.get     'keep-alive': 'timeout=10, max=50',
+136 silly registry.get     connection: 'Keep-Alive' } ]
+137 silly addNameRange number 2 { name: 'generator-mobileangularui', range: '*', hasData: true }
+138 silly addNameRange versions [ 'generator-mobileangularui',
+138 silly addNameRange   [ '1.0.0-beta.1',
+138 silly addNameRange     '1.0.0-beta.2',
+138 silly addNameRange     '1.0.0-beta.3',
+138 silly addNameRange     '1.0.0-beta.4',
+138 silly addNameRange     '1.0.0-beta.5',
+138 silly addNameRange     '1.0.0-beta.6',
+138 silly addNameRange     '1.2.0-beta.1',
+138 silly addNameRange     '1.2.0-beta.2',
+138 silly addNameRange     '1.2.0-beta.3',
+138 silly addNameRange     '1.2.0' ] ]
+139 verbose addNamed [ 'generator-mobileangularui', '1.2.0' ]
+140 verbose addNamed [ '1.2.0', '1.2.0' ]
+141 silly lockFile 4d4f4dab-generator-mobileangularui-1-2-0 generator-mobileangularui@1.2.0
+142 verbose lock generator-mobileangularui@1.2.0 /Users/anniej/.npm/4d4f4dab-generator-mobileangularui-1-2-0.lock
+143 silly lockFile 2d056b89-erator-mobileangularui-1-2-0-tgz https://registry.npmjs.org/generator-mobileangularui/-/generator-mobileangularui-1.2.0.tgz
+144 verbose lock https://registry.npmjs.org/generator-mobileangularui/-/generator-mobileangularui-1.2.0.tgz /Users/anniej/.npm/2d056b89-erator-mobileangularui-1-2-0-tgz.lock
+145 verbose addRemoteTarball [ 'https://registry.npmjs.org/generator-mobileangularui/-/generator-mobileangularui-1.2.0.tgz',
+145 verbose addRemoteTarball   'eaae482be3fd382ce6487beca1c497e926c06ddf' ]
+146 info retry fetch attempt 1 at 15:08:18
+147 verbose fetch to= /var/folders/bk/1z27ysln2_bby2dj532f9s200000gn/T/npm-1215-16_sELHO/registry.npmjs.org/generator-mobileangularui/-/generator-mobileangularui-1.2.0.tgz
+148 http GET https://registry.npmjs.org/generator-mobileangularui/-/generator-mobileangularui-1.2.0.tgz
+149 http 200 https://registry.npmjs.org/gulp/-/gulp-3.8.10.tgz
+150 silly lockFile b3287162-y-npmjs-org-gulp-gulp-3-8-10-tgz https://registry.npmjs.org/gulp/-/gulp-3.8.10.tgz
+151 silly lockFile b3287162-y-npmjs-org-gulp-gulp-3-8-10-tgz https://registry.npmjs.org/gulp/-/gulp-3.8.10.tgz
+152 silly lockFile f843d0d7-gulp-3-8-10 gulp@3.8.10
+153 silly lockFile f843d0d7-gulp-3-8-10 gulp@3.8.10
+154 silly lockFile 72f4391e-gulp gulp@
+155 silly lockFile 72f4391e-gulp gulp@
+156 silly lockFile b05fd70b-npmjs-org-bower-bower-1-3-12-tgz https://registry.npmjs.org/bower/-/bower-1.3.12.tgz
+157 silly lockFile b05fd70b-npmjs-org-bower-bower-1-3-12-tgz https://registry.npmjs.org/bower/-/bower-1.3.12.tgz
+158 silly lockFile 9819431c-bower-1-3-12 bower@1.3.12
+159 silly lockFile 9819431c-bower-1-3-12 bower@1.3.12
+160 silly lockFile 1240aab1-bower bower@
+161 silly lockFile 1240aab1-bower bower@
+162 http 200 https://registry.npmjs.org/generator-mobileangularui/-/generator-mobileangularui-1.2.0.tgz
+163 silly lockFile 2d056b89-erator-mobileangularui-1-2-0-tgz https://registry.npmjs.org/generator-mobileangularui/-/generator-mobileangularui-1.2.0.tgz
+164 silly lockFile 2d056b89-erator-mobileangularui-1-2-0-tgz https://registry.npmjs.org/generator-mobileangularui/-/generator-mobileangularui-1.2.0.tgz
+165 silly lockFile 4d4f4dab-generator-mobileangularui-1-2-0 generator-mobileangularui@1.2.0
+166 silly lockFile 4d4f4dab-generator-mobileangularui-1-2-0 generator-mobileangularui@1.2.0
+167 silly lockFile cb51a578-generator-mobileangularui generator-mobileangularui@
+168 silly lockFile cb51a578-generator-mobileangularui generator-mobileangularui@
+169 silly resolved [ { name: 'yo',
+169 silly resolved     version: '1.3.3',
+169 silly resolved     description: 'CLI tool for running Yeoman generators',
+169 silly resolved     license: 'BSD',
+169 silly resolved     bin: { yo: 'cli.js' },
+169 silly resolved     author: { name: 'The Yeoman Team' },
+169 silly resolved     repository: { type: 'git', url: 'https://github.com/yeoman/yo' },
+169 silly resolved     engines: { node: '>=0.10.0', npm: '>=1.4.3' },
+169 silly resolved     scripts:
+169 silly resolved      { test: 'grunt',
+169 silly resolved        postinstall: 'yodoctor',
+169 silly resolved        postupdate: 'yodoctor' },
+169 silly resolved     files: [ 'cli.js', 'yoyo.js' ],
+169 silly resolved     keywords:
+169 silly resolved      [ 'front-end',
+169 silly resolved        'development',
+169 silly resolved        'dev',
+169 silly resolved        'build',
+169 silly resolved        'web',
+169 silly resolved        'tool',
+169 silly resolved        'cli',
+169 silly resolved        'scaffold',
+169 silly resolved        'stack',
+169 silly resolved        'yeoman',
+169 silly resolved        'generator',
+169 silly resolved        'app' ],
+169 silly resolved     dependencies:
+169 silly resolved      { async: '^0.9.0',
+169 silly resolved        chalk: '^0.5.1',
+169 silly resolved        configstore: '^0.3.1',
+169 silly resolved        findup: '^0.1.5',
+169 silly resolved        fullname: '^1.0.0',
+169 silly resolved        insight: '^0.4.3',
+169 silly resolved        'is-root': '^1.0.0',
+169 silly resolved        lodash: '^2.4.1',
+169 silly resolved        multiline: '^1.0.0',
+169 silly resolved        nopt: '^3.0.0',
+169 silly resolved        opn: '^1.0.0',
+169 silly resolved        shelljs: '^0.3.0',
+169 silly resolved        'string-length': '^1.0.0',
+169 silly resolved        'sudo-block': '^1.0.0',
+169 silly resolved        'underscore.string': '^2.3.3',
+169 silly resolved        'update-notifier': '^0.2.2',
+169 silly resolved        'yeoman-character': '^1.0.0',
+169 silly resolved        'yeoman-doctor': '^1.0.0',
+169 silly resolved        'yeoman-environment': '^1.0.1',
+169 silly resolved        'yeoman-generator': '^0.17.7',
+169 silly resolved        yosay: '^1.0.0' },
+169 silly resolved     devDependencies:
+169 silly resolved      { grunt: '^0.4.5',
+169 silly resolved        'grunt-cli': '^0.1.13',
+169 silly resolved        'grunt-contrib-jshint': '^0.10.0',
+169 silly resolved        'grunt-contrib-watch': '^0.6.1',
+169 silly resolved        'grunt-mocha-test': '^0.12.1',
+169 silly resolved        mocha: '^1.21.4',
+169 silly resolved        mockery: '^1.4.0',
+169 silly resolved        sinon: '^1.10.3' },
+169 silly resolved     engineStrict: true,
+169 silly resolved     preferGlobal: true,
+169 silly resolved     gitHead: '813c37641c928431260e908ef1b5723c0f18afab',
+169 silly resolved     bugs: { url: 'https://github.com/yeoman/yo/issues' },
+169 silly resolved     homepage: 'https://github.com/yeoman/yo',
+169 silly resolved     _id: 'yo@1.3.3',
+169 silly resolved     _shasum: '732b053d6da401965ef146fe914d014474c37c1b',
+169 silly resolved     _from: 'yo@',
+169 silly resolved     _npmVersion: '2.1.2',
+169 silly resolved     _nodeVersion: '0.10.32',
+169 silly resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+169 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+169 silly resolved     dist:
+169 silly resolved      { shasum: '732b053d6da401965ef146fe914d014474c37c1b',
+169 silly resolved        tarball: 'http://registry.npmjs.org/yo/-/yo-1.3.3.tgz' },
+169 silly resolved     directories: {},
+169 silly resolved     _resolved: 'https://registry.npmjs.org/yo/-/yo-1.3.3.tgz' },
+169 silly resolved   { name: 'gulp',
+169 silly resolved     description: 'The streaming build system',
+169 silly resolved     version: '3.8.10',
+169 silly resolved     homepage: 'http://gulpjs.com',
+169 silly resolved     repository: { type: 'git', url: 'https://github.com/gulpjs/gulp' },
+169 silly resolved     author:
+169 silly resolved      { name: 'Fractal',
+169 silly resolved        email: 'contact@wearefractal.com',
+169 silly resolved        url: 'http://wearefractal.com/' },
+169 silly resolved     tags: [ 'build', 'stream', 'system', 'make', 'tool', 'asset', 'pipeline' ],
+169 silly resolved     files: [ 'index.js', 'lib', 'bin', 'completion' ],
+169 silly resolved     bin: { gulp: './bin/gulp.js' },
+169 silly resolved     man: [ 'gulp.1' ],
+169 silly resolved     dependencies:
+169 silly resolved      { archy: '^1.0.0',
+169 silly resolved        chalk: '^0.5.0',
+169 silly resolved        deprecated: '^0.0.1',
+169 silly resolved        'gulp-util': '^3.0.0',
+169 silly resolved        interpret: '^0.3.2',
+169 silly resolved        liftoff: '^0.13.2',
+169 silly resolved        minimist: '^1.1.0',
+169 silly resolved        orchestrator: '^0.3.0',
+169 silly resolved        'pretty-hrtime': '^0.2.0',
+169 silly resolved        semver: '^4.1.0',
+169 silly resolved        tildify: '^1.0.0',
+169 silly resolved        v8flags: '^1.0.1',
+169 silly resolved        'vinyl-fs': '^0.3.0' },
+169 silly resolved     devDependencies:
+169 silly resolved      { coveralls: '^2.7.0',
+169 silly resolved        'graceful-fs': '^3.0.0',
+169 silly resolved        istanbul: '^0.3.0',
+169 silly resolved        jshint: '^2.5.0',
+169 silly resolved        'jshint-stylish': '^1.0.0',
+169 silly resolved        'marked-man': '^0.1.3',
+169 silly resolved        mkdirp: '^0.5.0',
+169 silly resolved        mocha: '^2.0.1',
+169 silly resolved        'mocha-lcov-reporter': '^0.0.1',
+169 silly resolved        q: '^1.0.0',
+169 silly resolved        rimraf: '^2.2.5',
+169 silly resolved        should: '^4.0.0' },
+169 silly resolved     scripts:
+169 silly resolved      { prepublish: 'marked-man --name gulp docs/CLI.md > gulp.1',
+169 silly resolved        lint: 'jshint lib bin index.js --reporter node_modules/jshint-stylish/stylish.js --exclude node_modules',
+169 silly resolved        test: 'npm run-script lint && mocha --reporter spec',
+169 silly resolved        coveralls: 'istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage' },
+169 silly resolved     engineStrict: true,
+169 silly resolved     engines: { node: '>= 0.9' },
+169 silly resolved     licenses: [ [Object] ],
+169 silly resolved     gitHead: '0203bccdc7397991da68ea3e51fef7b2df75a46f',
+169 silly resolved     bugs: { url: 'https://github.com/gulpjs/gulp/issues' },
+169 silly resolved     _id: 'gulp@3.8.10',
+169 silly resolved     _shasum: 'bfb8fc156be97820f02a7f8b3af61a86666f9e31',
+169 silly resolved     _from: 'gulp@',
+169 silly resolved     _npmVersion: '2.1.6',
+169 silly resolved     _nodeVersion: '0.10.33',
+169 silly resolved     _npmUser: { name: 'fractal', email: 'contact@wearefractal.com' },
+169 silly resolved     maintainers: [ [Object] ],
+169 silly resolved     dist:
+169 silly resolved      { shasum: 'bfb8fc156be97820f02a7f8b3af61a86666f9e31',
+169 silly resolved        tarball: 'http://registry.npmjs.org/gulp/-/gulp-3.8.10.tgz' },
+169 silly resolved     directories: {},
+169 silly resolved     _resolved: 'https://registry.npmjs.org/gulp/-/gulp-3.8.10.tgz' },
+169 silly resolved   { name: 'bower',
+169 silly resolved     version: '1.3.12',
+169 silly resolved     description: 'The browser package manager',
+169 silly resolved     author: { name: 'Twitter' },
+169 silly resolved     licenses: [ [Object] ],
+169 silly resolved     repository: { type: 'git', url: 'https://github.com/bower/bower' },
+169 silly resolved     main: 'lib',
+169 silly resolved     homepage: 'http://bower.io',
+169 silly resolved     engines: { node: '>=0.10.0' },
+169 silly resolved     dependencies:
+169 silly resolved      { abbrev: '~1.0.4',
+169 silly resolved        archy: '0.0.2',
+169 silly resolved        'bower-config': '~0.5.2',
+169 silly resolved        'bower-endpoint-parser': '~0.2.2',
+169 silly resolved        'bower-json': '~0.4.0',
+169 silly resolved        'bower-logger': '~0.2.2',
+169 silly resolved        'bower-registry-client': '~0.2.0',
+169 silly resolved        cardinal: '0.4.0',
+169 silly resolved        chalk: '0.5.0',
+169 silly resolved        chmodr: '0.1.0',
+169 silly resolved        'decompress-zip': '0.0.8',
+169 silly resolved        fstream: '~1.0.2',
+169 silly resolved        'fstream-ignore': '~1.0.1',
+169 silly resolved        glob: '~4.0.2',
+169 silly resolved        'graceful-fs': '~3.0.1',
+169 silly resolved        handlebars: '~2.0.0',
+169 silly resolved        inquirer: '0.7.1',
+169 silly resolved        insight: '0.4.3',
+169 silly resolved        'is-root': '~1.0.0',
+169 silly resolved        junk: '~1.0.0',
+169 silly resolved        lockfile: '~1.0.0',
+169 silly resolved        'lru-cache': '~2.5.0',
+169 silly resolved        mkdirp: '0.5.0',
+169 silly resolved        mout: '~0.9.0',
+169 silly resolved        nopt: '~3.0.0',
+169 silly resolved        opn: '~1.0.0',
+169 silly resolved        osenv: '0.1.0',
+169 silly resolved        'p-throttler': '0.1.0',
+169 silly resolved        promptly: '0.2.0',
+169 silly resolved        q: '~1.0.1',
+169 silly resolved        request: '~2.42.0',
+169 silly resolved        'request-progress': '0.3.0',
+169 silly resolved        retry: '0.6.0',
+169 silly resolved        rimraf: '~2.2.0',
+169 silly resolved        semver: '~2.3.0',
+169 silly resolved        'shell-quote': '~1.4.1',
+169 silly resolved        'stringify-object': '~1.0.0',
+169 silly resolved        'tar-fs': '0.5.2',
+169 silly resolved        tmp: '0.0.23',
+169 silly resolved        'update-notifier': '0.2.0',
+169 silly resolved        which: '~1.0.5' },
+169 silly resolved     devDependencies:
+169 silly resolved      { coveralls: '~2.11.0',
+169 silly resolved        'expect.js': '~0.3.1',
+169 silly resolved        grunt: '~0.4.4',
+169 silly resolved        'grunt-cli': '^0.1.13',
+169 silly resolved        'grunt-contrib-jshint': '~0.10.0',
+169 silly resolved        'grunt-contrib-watch': '~0.6.1',
+169 silly resolved        'grunt-exec': '~0.4.2',
+169 silly resolved        'grunt-simple-mocha': '~0.4.0',
+169 silly resolved        istanbul: '~0.3.2',
+169 silly resolved        'load-grunt-tasks': '~0.6.0',
+169 silly resolved        mocha: '~1.21.4',
+169 silly resolved        nock: '~0.46.0',
+169 silly resolved        'node-uuid': '~1.4.1',
+169 silly resolved        proxyquire: '~1.0.1' },
+169 silly resolved     scripts: { test: 'grunt test' },
+169 silly resolved     bin: { bower: 'bin/bower' },
+169 silly resolved     preferGlobal: true,
+169 silly resolved     gitHead: 'b26c072f0db054a1902ec4d2e3726dbf8a1c799a',
+169 silly resolved     bugs: { url: 'https://github.com/bower/bower/issues' },
+169 silly resolved     _id: 'bower@1.3.12',
+169 silly resolved     _shasum: '37de0edb3904baf90aee13384a1a379a05ee214c',
+169 silly resolved     _from: 'bower@',
+169 silly resolved     _npmVersion: '2.0.0',
+169 silly resolved     _npmUser: { name: 'sheerun', email: 'sheerun@sher.pl' },
+169 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+169 silly resolved     dist:
+169 silly resolved      { shasum: '37de0edb3904baf90aee13384a1a379a05ee214c',
+169 silly resolved        tarball: 'http://registry.npmjs.org/bower/-/bower-1.3.12.tgz' },
+169 silly resolved     directories: {},
+169 silly resolved     _resolved: 'https://registry.npmjs.org/bower/-/bower-1.3.12.tgz' },
+169 silly resolved   { name: 'generator-mobileangularui',
+169 silly resolved     version: '1.2.0',
+169 silly resolved     description: 'Yeoman generator for Mobile Angular Ui',
+169 silly resolved     license: 'MIT',
+169 silly resolved     main: 'app/index.js',
+169 silly resolved     repository:
+169 silly resolved      { type: 'git',
+169 silly resolved        url: 'https://github.com/mcasimir/generator-mobileangularui' },
+169 silly resolved     author: { name: 'mcasimir', url: 'https://github.com/mcasimir' },
+169 silly resolved     engines: { node: '>=0.10.0' },
+169 silly resolved     scripts: { test: 'mocha' },
+169 silly resolved     files: [ 'app' ],
+169 silly resolved     keywords: [ 'yeoman-generator', 'mobile-angular-ui' ],
+169 silly resolved     dependencies:
+169 silly resolved      { 'yeoman-generator': '~0.16.0',
+169 silly resolved        chalk: '~0.4.0',
+169 silly resolved        yosay: '^0.1.0',
+169 silly resolved        slug: '^0.5.0' },
+169 silly resolved     devDependencies: { mocha: '*' },
+169 silly resolved     peerDependencies: { yo: '>=1.0.0' },
+169 silly resolved     gitHead: '76ef72f42a8c944ffba8554a2218a4737a39c1ae',
+169 silly resolved     bugs: { url: 'https://github.com/mcasimir/generator-mobileangularui/issues' },
+169 silly resolved     homepage: 'https://github.com/mcasimir/generator-mobileangularui',
+169 silly resolved     _id: 'generator-mobileangularui@1.2.0',
+169 silly resolved     _shasum: 'eaae482be3fd382ce6487beca1c497e926c06ddf',
+169 silly resolved     _from: 'generator-mobileangularui@',
+169 silly resolved     _npmVersion: '2.1.6',
+169 silly resolved     _nodeVersion: '0.10.33',
+169 silly resolved     _npmUser: { name: 'mcasimir', email: 'maurizio.cas@gmail.com' },
+169 silly resolved     maintainers: [ [Object] ],
+169 silly resolved     dist:
+169 silly resolved      { shasum: 'eaae482be3fd382ce6487beca1c497e926c06ddf',
+169 silly resolved        tarball: 'http://registry.npmjs.org/generator-mobileangularui/-/generator-mobileangularui-1.2.0.tgz' },
+169 silly resolved     directories: {},
+169 silly resolved     _resolved: 'https://registry.npmjs.org/generator-mobileangularui/-/generator-mobileangularui-1.2.0.tgz' } ]
+170 info install yo@1.3.3 into /usr/local/lib
+171 info install gulp@3.8.10 into /usr/local/lib
+172 info install bower@1.3.12 into /usr/local/lib
+173 info install generator-mobileangularui@1.2.0 into /usr/local/lib
+174 info installOne yo@1.3.3
+175 info installOne gulp@3.8.10
+176 info installOne bower@1.3.12
+177 info installOne generator-mobileangularui@1.2.0
+178 verbose lib/node_modules/yo unbuild
+179 verbose lib/node_modules/gulp unbuild
+180 verbose lib/node_modules/bower unbuild
+181 verbose lib/node_modules/generator-mobileangularui unbuild
+182 verbose tar unpack /Users/anniej/.npm/yo/1.3.3/package.tgz
+183 silly lockFile 7d7c7bef-ar-usr-local-lib-node-modules-yo tar:///usr/local/lib/node_modules/yo
+184 verbose lock tar:///usr/local/lib/node_modules/yo /Users/anniej/.npm/7d7c7bef-ar-usr-local-lib-node-modules-yo.lock
+185 silly lockFile 7384385b--anniej-npm-yo-1-3-3-package-tgz tar:///Users/anniej/.npm/yo/1.3.3/package.tgz
+186 verbose lock tar:///Users/anniej/.npm/yo/1.3.3/package.tgz /Users/anniej/.npm/7384385b--anniej-npm-yo-1-3-3-package-tgz.lock
+187 verbose tar unpack /Users/anniej/.npm/gulp/3.8.10/package.tgz
+188 silly lockFile f8641481--usr-local-lib-node-modules-gulp tar:///usr/local/lib/node_modules/gulp
+189 verbose lock tar:///usr/local/lib/node_modules/gulp /Users/anniej/.npm/f8641481--usr-local-lib-node-modules-gulp.lock
+190 silly lockFile 88f8f2bb-niej-npm-gulp-3-8-10-package-tgz tar:///Users/anniej/.npm/gulp/3.8.10/package.tgz
+191 verbose lock tar:///Users/anniej/.npm/gulp/3.8.10/package.tgz /Users/anniej/.npm/88f8f2bb-niej-npm-gulp-3-8-10-package-tgz.lock
+192 verbose tar unpack /Users/anniej/.npm/bower/1.3.12/package.tgz
+193 silly lockFile 1396471b-usr-local-lib-node-modules-bower tar:///usr/local/lib/node_modules/bower
+194 verbose lock tar:///usr/local/lib/node_modules/bower /Users/anniej/.npm/1396471b-usr-local-lib-node-modules-bower.lock
+195 silly lockFile a341dbc6-iej-npm-bower-1-3-12-package-tgz tar:///Users/anniej/.npm/bower/1.3.12/package.tgz
+196 verbose lock tar:///Users/anniej/.npm/bower/1.3.12/package.tgz /Users/anniej/.npm/a341dbc6-iej-npm-bower-1-3-12-package-tgz.lock
+197 verbose tar unpack /Users/anniej/.npm/generator-mobileangularui/1.2.0/package.tgz
+198 silly lockFile 5f13f6d3-odules-generator-mobileangularui tar:///usr/local/lib/node_modules/generator-mobileangularui
+199 verbose lock tar:///usr/local/lib/node_modules/generator-mobileangularui /Users/anniej/.npm/5f13f6d3-odules-generator-mobileangularui.lock
+200 silly lockFile 3b1e0777-obileangularui-1-2-0-package-tgz tar:///Users/anniej/.npm/generator-mobileangularui/1.2.0/package.tgz
+201 verbose lock tar:///Users/anniej/.npm/generator-mobileangularui/1.2.0/package.tgz /Users/anniej/.npm/3b1e0777-obileangularui-1-2-0-package-tgz.lock
+202 silly gunzTarPerm modes [ '755', '644' ]
+203 silly gunzTarPerm modes [ '755', '644' ]
+204 silly gunzTarPerm modes [ '755', '644' ]
+205 silly gunzTarPerm modes [ '755', '644' ]
+206 error Error: EACCES, mkdir '/usr/local/lib/node_modules/yo'
+206 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/yo']
+206 error   errno: 3,
+206 error   code: 'EACCES',
+206 error   path: '/usr/local/lib/node_modules/yo',
+206 error   fstream_type: 'Directory',
+206 error   fstream_path: '/usr/local/lib/node_modules/yo',
+206 error   fstream_class: 'DirWriter',
+206 error   fstream_stack:
+206 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+206 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+206 error      'Object.oncomplete (fs.js:108:15)' ] }
+207 error Please try running this command again as root/Administrator.
+208 error System Darwin 14.0.0
+209 error command "node" "/usr/local/bin/npm" "install" "-g" "bower" "yo" "gulp" "generator-mobileangularui"
+210 error cwd /Users/anniej/Desktop/Dropbox (Personal)/projects/locuslens
+211 error node -v v0.10.35
+212 error npm -v 1.4.28
+213 error path /usr/local/lib/node_modules/yo
+214 error fstream_path /usr/local/lib/node_modules/yo
+215 error fstream_type Directory
+216 error fstream_class DirWriter
+217 error code EACCES
+218 error errno 3
+219 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/yo'
+220 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+220 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+220 error fstream_stack Object.oncomplete (fs.js:108:15)
+221 verbose exit [ 3, true ]
