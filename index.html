@@ -41,9 +41,9 @@
         For a more solid solution, check out ScrollFix ( https://github.com/joelambert/ScrollFix )
     -->
     <script>
-    function BlockElasticScroll(event) {
-        event.preventDefault() ;
-    }
+    // function BlockElasticScroll(event) {
+    //     event.preventDefault() ;
+    // }
     
     // In JavaScript, you can use "window.navigator.standalone" to detect wether
     // the page is being viewed on your website, or as a standalone application.
@@ -59,12 +59,15 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
 </head>
-<body ontouchmove="BlockElasticScroll(event);">
+<!-- <body ontouchmove="BlockElasticScroll(event);"> -->
+<body>
 
     <h1>Locus Lens</h1>
     <p>sdfaslkdfjas;l<br>
     dfkjaw;lkfjas;df</p>
 
+
+    <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
 
 <div class="timelineCard">
   <div class="mediaPhoto">
@@ -154,8 +157,10 @@ position: relative;
 
 .iImage{
   height: 510px;
+  width: 510px;
   display:block;
   position: absolute;;
+
 }
 
 .mediaPhoto{
