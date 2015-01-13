@@ -8,7 +8,7 @@
 
     <!-- <script src="lib/handlebars.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.6.2/semantic.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.6.2/semantic.min.css"></script> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.6.2/semantic.min.css" />
 
     <title>Locus Lens</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
@@ -45,6 +45,12 @@
     // function BlockElasticScroll(event) {
     //     event.preventDefault() ;
     // }
+
+    $('.dropdown').dropdown({
+          // you can use any ui transition
+          transition: 'drop'
+        })
+      ;
     
     // In JavaScript, you can use "window.navigator.standalone" to detect wether
     // the page is being viewed on your website, or as a standalone application.
@@ -72,11 +78,12 @@
     <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput"></p>
 
 <div class="timelineCard">
-  <div class="mediaPhoto">
+  <!-- <div class="mediaPhoto">
     <span class="i-like-big"></span>
     <div src="sample.jpg" class="mpFrame Frame Image" >
     <div class="iImage" style="background-image:url(sample.jpg);"></div></div>
-  </div>
+  </div> -->
+  <div class="Image"><img src="sample.jpg" class="iImage"></div>
 
 
     <!-- <div class="timelineLikes"><a href="javascript:;" title="Toggle like" class="timelineLikeButton"> -->
@@ -89,10 +96,116 @@
         <span></span>
         <a class="llNameLink" href="/djustinserrano/">djustinserrano</a><span>, </span><a class="llNameLink" href="/brihunna/" >brihunna</a><span >, </span><a class="llNameLink" href="/telterman/" >telterman</a><span > and </span><span class="llRemainingCount" >9,953</span><span > others like this.
 
-        </span></span></div></div><div class="timelineComments" ><div class="timelineComment timelineCaption" ><a href="/thefatjewish/" ><div src="https://igcdn-photos-h-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-19/10903634_788697234517679_1855079012_a.jpg" class="timelineCommentAvatar Image" ><div class="iImage" style="background-image:url(https://igcdn-photos-h-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-19/10903634_788697234517679_1855079012_a.jpg);" ></div></div></a><a class="timelineCommentUsername" href="/thefatjewish/" >thefatjewish</a><span class="timelineCommentText" title="Edited" ><span >Ferris Bueller would be proud of this type of shit. WELL PLAYED GIRL.</span></span><a class="delete-comment" ></a></div>
+        <div class="ui comments">
 
 
-        <div class="scrollArea scrollAreaOpen scrollAreaInitialized" style="height: 132px;" ><div class="scrollAreaContents" ><div class="timelineComment timelineCommentMore" ><a class="timelineCommentText" ><span ><span ></span><span >1,439</span><span > more comments</span></span></a></div><div class="timelineComment" ><a href="/patrizioannibaldi/" ><div src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xpf1/t51.2885-19/10424371_1419204115026124_1583535338_a.jpg" class="timelineCommentAvatar Image" ><div class="iImage" style="background-image:url(https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xpf1/t51.2885-19/10424371_1419204115026124_1583535338_a.jpg);" ></div></div></a><a class="timelineCommentUsername" href="/patrizioannibaldi/" >patrizioannibaldi</a><span class="timelineCommentText" ><a href="/sbblondes/" >@sbblondes</a><span > tomorrow..</span></span><a class="delete-comment" ></a></div><div class="timelineComment" ><a href="/aida624/" ><div src="https://instagramimages-a.akamaihd.net/profiles/profile_1355676_75sq_1392951725.jpg" class="timelineCommentAvatar Image" ><div class="iImage" style="background-image:url(https://instagramimages-a.akamaihd.net/profiles/profile_1355676_75sq_1392951725.jpg);" ></div></div></a><a class="timelineCommentUsername" href="/aida624/" >aida624</a><span class="timelineCommentText" ><a href="/hyattrachel/" >@hyattrachel</a></span><a class="delete-comment" ></a></div><div class="timelineComment" ><a href="/astateofjames/" ><div src="https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xpa1/t51.2885-19/10424559_1439564472959816_672493670_a.jpg" class="timelineCommentAvatar Image" ><div class="iImage" style="background-image:url(https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xpa1/t51.2885-19/10424559_1439564472959816_672493670_a.jpg);" ></div></div></a><a class="timelineCommentUsername" href="/astateofjames/" >astateofjames</a><span class="timelineCommentText" ><a href="/itsmorganduhhhhhh/" >@itsmorganduhhhhhh</a></span><a class="delete-comment" ></a></div></div></div><div class="timelineCommentComposer" ><div style="width:24px;height:24px;" class="timelineCommentAvatar Image" ><div class="iImage" style="background-image:url(undefined);" ></div></div><div class="timelineCommentText" ><form class="timelineCommentForm" ><input type="text" placeholder="Write a comment..." class="fadedTextField timelineCommentTextField" ></form></div></div></div></div>
+          <h3 class="ui dividing header">Comments</h3>
+          <div class="ui labeled input">
+  <div class="ui label">
+     <div class="ui dropdown">
+      <div class="text">Shop</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="header">attribute</div>
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="divider"></div>
+        <!-- <div class="header">D</div> -->
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+      </div>
+</div>
+  </div>
+  <input type="text" placeholder="Placeholder..."> </div> 
+          <div class="comment">
+            <a class="avatar">
+              <img src="/images/avatar/small/matt.jpg">
+            </a>
+            <div class="content">
+              <a class="author">Matt</a>
+              <div class="metadata">
+                <span class="date">Today at 5:42PM</span>
+              </div>
+              <div class="text">
+                How artistic!
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <a class="avatar">
+              <img src="/images/avatar/small/elliot.jpg">
+            </a>
+            <div class="content">
+              <a class="author">Elliot Fu</a>
+              <div class="metadata">
+                <span class="date">Yesterday at 12:30AM</span>
+              </div>
+              <div class="text">
+                <p>This has been very useful for my research. Thanks as well!</p>
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+              </div>
+            </div>
+            <div class="comments">
+              <div class="comment">
+                <a class="avatar">
+                  <img src="/images/avatar/small/jenny.jpg">
+                </a>
+                <div class="content">
+                  <a class="author">Jenny Hess</a>
+                  <div class="metadata">
+                    <span class="date">Just now</span>
+                  </div>
+                  <div class="text">
+                    Elliot you are always so right :)
+                  </div>
+                  <div class="actions">
+                    <a class="reply">Reply</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <a class="avatar">
+              <img src="/images/avatar/small/joe.jpg">
+            </a>
+            <div class="content">
+              <a class="author">Joe Henderson</a>
+              <div class="metadata">
+                <span class="date">5 days ago</span>
+              </div>
+              <div class="text">
+                Dude, this is awesome. Thanks so much
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+              </div>
+            </div>
+          </div>
+          <!-- <form class="ui reply form">
+            <div class="field">
+              <textarea></textarea>
+            </div>
+            <div class="ui blue labeled submit icon button">
+              <i class="icon edit"></i> Add Reply
+            </div>
+          </form> -->
+        </div>
+        
+
+        <!-- <input type="text" placeholder="Write a comment..." class="fadedTextField timelineCommentTextField" ></form> -->
+          <!-- <div class="ui blue labeled submit icon button"><i class="icon edit"></i> Add
+</div> -->
+
+
+        </div></div></div></div>
 
     <!-- <div class="hidden templates"> -->
       <!-- MEDIA TEMPLATE -->
@@ -132,53 +245,15 @@
 
     </div> --> 
 
-<style type="text/css">
-  .timelineCard {
-    background: #fafafa;
-    border: 1px solid silver;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 1px 16px rgba(0,0,0,.1);
-    -moz-box-shadow: 0 1px 16px rgba(0,0,0,.1);
-    box-shadow: 0 1px 16px rgba(0,0,0,.1);
-    text-align: left;
-    width: 100%;
-    margin:20px;
-    padding: 10px;
-}
 
-body {
-    line-height: 20px;
-    color: #222;
-    display: block;
-    position: relative;
-    /*font-size: 1.4rem;*/
-    /*font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif; */
-}
+<script>
+$('.dropdown').dropdown({
+          // you can use any ui transition
+          transition: 'drop'
+        })
+      ;
+</script>
 
-.Image {
-overflow: hidden;
-position: relative;
-}
-
-.iImage{
-  /*height: 100%;*/
-  width: 100%;
-  display:block;
-  position: absolute;;
-
-}
-
-.timelineLikeButton{
-  font-size: 2em;
-  padding: 5px;
-}
-
-.mediaPhoto{
-  /*height: 510px*/
-}
-
-</style>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 /*
 /* BASIC RESET */
-ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{margin:10; padding:0;}
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{margin:10; padding:10;}
 
 /* HTML ELEMENTS */
 body { font: 12px "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif; }
@@ -8,3 +8,45 @@ h1 { padding:60px 0 0 40px; }
 p { padding:10px 40px; }
 a { color:#999; text-decoration:none; }
 a:hover { text-decoration:underline; }
+
+  .timelineCard {
+    background: #fafafa;
+    border: 1px solid silver;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 16px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 1px 16px rgba(0,0,0,.1);
+    box-shadow: 0 1px 16px rgba(0,0,0,.1);
+    text-align: left;
+    margin:20px;
+    padding: 10px;
+}
+
+body {
+    line-height: 20px;
+    color: #222;
+    display: block;
+    position: relative;
+    /*font-size: 1.4rem;*/
+    /*font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif; */
+}
+
+.Image {
+overflow: hidden;
+position: relative;
+width:inherit;
+}
+
+.iImage{
+  max-width: 100%;
+
+}
+
+.timelineLikeButton{
+  font-size: 2em;
+  padding: 5px;
+}
+
+.mediaPhoto{
+  /*height: 510px*/
+}
