@@ -44,15 +44,7 @@
         For a more solid solution, check out ScrollFix ( https://github.com/joelambert/ScrollFix )
     -->
     <script>
-    // function BlockElasticScroll(event) {
-    //     event.preventDefault() ;
-    // }
 
-    $('.dropdown').dropdown({
-          // you can use any ui transition
-          transition: 'drop'
-        })
-      ;
     
     // In JavaScript, you can use "window.navigator.standalone" to detect wether
     // the page is being viewed on your website, or as a standalone application.
@@ -83,14 +75,57 @@
   <div class="right menu">
     <div class="item">
       <div class="ui right input mini">
-  <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search">
+      </div>
+    </div>
+
+    <a class="item">
+      <i class="add circle icon" id="userUploadNew"></i>
+    </a>
+</div>
+</div>
+
+
+<!-- HIDDEN FILE SELECTOR -->
+<div class="hidden">
+  <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput"></p>
+</div>
+
+<div class="ui page dimmer">
+  <div class="content">
+    <div class="center">
+      
+      <!-- NEW COMMENT -->
+
+      <div class="ui fluid labeled action input">
+        <div class="ui teal label">
+           <div class="ui dropdown">
+            <i class="tags icon"></i>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <div class="header">attribute</div>
+              <div class="item">A</div>
+              <div class="item">B</div>
+              <div class="item">C</div>
+              <div class="divider"></div>
+              <!-- <div class="header">D</div> -->
+              <div class="item">D</div>
+              <div class="item">E</div>
+              <div class="item">F</div>
+            </div>
+          </div>
+        </div>
+
+        <input type="text" placeholder="add a tag..."> 
+        <div class="ui label button" id>
+          <i class="add icon"></i>
+        </div> 
+      </div> 
+
+
     </div>
   </div>
 </div>
-</div>
-
-
-    <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput"></p>
 
 <div class="timelineCard ui segment">
   <!-- <div class="mediaPhoto">
@@ -101,7 +136,7 @@
 
   <a class="ui image label">
     Rory Riggs
-    <span class="detail">Just now</span>
+    <span class=" detail">Just now</span>
   </a>
   <div class="ui divider"></div>
   <img class="ui centered bordered image iImage" src="sample.jpg">
@@ -123,14 +158,14 @@
         
 
   <!-- DIVIDER FOR COMMENTS -->
-  <div class="ui horizontal divider"> <i class="comments icon"></i> </div>
+  <div class="ui horizontal divider"> <i class="large write icon button addComment"></i> </div>
 
   <!-- COMMENTS COLLAPSE -->
   <div class="ui fluid accordion">
     <div class="ui comments">
       <div class="title">
         <i class="dropdown icon"></i>
-          View tags
+          View 3 existing tags
       </div>
 
       <!-- CONTENT OF ACCORDION -->
@@ -184,27 +219,9 @@
       </div>
     </div>
 
-        <!-- COMMENT SECTION -->
 
-          <div class="ui fluid mini labeled input">
-            <div class="ui teal label">
-               <div class="ui dropdown">
-                <i class="tags icon"></i>
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                  <div class="header">attribute</div>
-                  <div class="item">A</div>
-                  <div class="item">B</div>
-                  <div class="item">C</div>
-                  <div class="divider"></div>
-                  <!-- <div class="header">D</div> -->
-                  <div class="item">D</div>
-                  <div class="item">E</div>
-                  <div class="item">F</div>
-                </div>
-              </div>
-          </div>
-          <input type="text" placeholder="add a tag..."> </div> 
+
+
         </div>
         
 
@@ -264,8 +281,31 @@ $('.ui.accordion')
   .accordion()
 ;
 
-var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-$('.iImage').width(width-20);
+// $('.dimmer')
+//   .dimmer({
+//    closable: false
+//   })
+// ;
+
+$('.addComment').click(function() {
+  $('.dimmer')
+    .dimmer('show')
+  ;
+});
+
+// $('.ui.dimmer')
+//   .dimmer('show');
+
+function BlockElasticScroll(event) {
+    event.preventDefault() ;
+}
+
+$('#userUploadNew').click(function(){
+  $('#cameraInput').click();
+})
+
+// var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+// $('.iImage').width(width-20);
 </script>
 
 
