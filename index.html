@@ -14,7 +14,8 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     
     <!-- Set the viewport to show the page at a scale of 1.0, and make it non-scalable -->
-    <meta name="viewport" content="initial-scale=1">
+    <!-- <meta name="viewport" content="initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
     <!-- Make it fullscreen / hide the browser URL bar -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -25,7 +26,7 @@
         If set to "default" or "black", the content is displayed below the status bar. If set to
         "black-translucent", the content is displayed under the bar.
     -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -88,37 +89,24 @@
 
     <!-- <div class="timelineLikes"><a href="javascript:;" title="Toggle like" class="timelineLikeButton"> -->
 
-    <div class="timelineLikes"><a href="javascript:;" title="Toggle like" class="timelineLikeButton fa fa-heart"> high five!
-    <span class="timelineLikeButtonAnimation" ></span ></a>
-
+    <div class="timelineLikes">  <div class="ui labeled icon button"> <i class="star icon"></i> high five </div>
       <div class="timelineLikeList">
       <span class="LikeList">
         <span></span>
-        <a class="llNameLink" href="/djustinserrano/">djustinserrano</a><span>, </span><a class="llNameLink" href="/brihunna/" >brihunna</a><span >, </span><a class="llNameLink" href="/telterman/" >telterman</a><span > and </span><span class="llRemainingCount" >9,953</span><span > others like this.
+        <a class="llNameLink" href="/djustinserrano/">djustinserrano</a><span>, </span><a class="llNameLink" href="/brihunna/" >brihunna</a><span >, </span><a class="llNameLink" href="/telterman/" >telterman</a><span > and </span><span class="llRemainingCount" >9,953</span><span > others high-fived this.
 
-        <div class="ui comments">
+        
+<div class="ui comments">
 
-
-          <h3 class="ui dividing header">Comments</h3>
-          <div class="ui labeled input">
-  <div class="ui label">
-     <div class="ui dropdown">
-      <div class="text">Shop</div>
-      <i class="dropdown icon"></i>
-      <div class="menu">
-        <div class="header">attribute</div>
-        <div class="item">A</div>
-        <div class="item">B</div>
-        <div class="item">C</div>
-        <div class="divider"></div>
-        <!-- <div class="header">D</div> -->
-        <div class="item">D</div>
-        <div class="item">E</div>
-        <div class="item">F</div>
-      </div>
-</div>
+  <div class="ui horizontal divider">
+    <i class="comments icon"></i>
   </div>
-  <input type="text" placeholder="Placeholder..."> </div> 
+  <div class="ui fluid accordion">
+    <div class="title">
+      <i class="dropdown icon"></i>
+        View comments
+      </div>
+    <div class="content">
           <div class="comment">
             <a class="avatar">
               <img src="/images/avatar/small/matt.jpg">
@@ -189,6 +177,36 @@
               </div>
             </div>
           </div>
+  </div>
+</div>
+
+        <!-- COMMENT SECTION -->
+
+        
+
+
+
+
+
+          <div class="ui labeled input">
+            <div class="ui label">
+               <div class="ui dropdown">
+                <div class="text">Shop</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <div class="header">attribute</div>
+                  <div class="item">A</div>
+                  <div class="item">B</div>
+                  <div class="item">C</div>
+                  <div class="divider"></div>
+                  <!-- <div class="header">D</div> -->
+                  <div class="item">D</div>
+                  <div class="item">E</div>
+                  <div class="item">F</div>
+                </div>
+              </div>
+          </div>
+  <input type="text" placeholder="add a tag..."> </div> 
           <!-- <form class="ui reply form">
             <div class="field">
               <textarea></textarea>
@@ -252,6 +270,13 @@ $('.dropdown').dropdown({
           transition: 'drop'
         })
       ;
+
+$('.ui.accordion')
+  .accordion()
+;
+
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+$('.iImage').width(width-20);
 </script>
 
 
