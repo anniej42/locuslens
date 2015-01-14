@@ -6,7 +6,8 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 
-    <!-- <script src="lib/handlebars.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.6.2/semantic.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.6.2/semantic.min.css" />
 
@@ -76,9 +77,6 @@
     <i class="home icon"></i>
   </a>
   <a class="item">
-    <i class="mail icon"></i>
-  </a>
-  <a class="item">
     <i class="user icon"></i>
   </a>
   
@@ -107,7 +105,7 @@
   </a>
   <div class="ui divider"></div>
   <img class="ui centered bordered image iImage" src="sample.jpg">
-  <div class="ui divider"></div>
+  <div class="ui horizontal divider"> <i class="heart icon"></i> </div>
 
     <!-- <div class="timelineLikes"><a href="javascript:;" title="Toggle like" class="timelineLikeButton"> -->
 
@@ -120,12 +118,11 @@
     </div>
         
 
+  <!-- DIVIDER FOR COMMENTS -->
 
-  <div class="ui horizontal divider">
-    <i class="comments icon"></i>
-  </div>
+  <div class="ui horizontal divider"> <i class="comments icon"></i> </div>
 
-
+  <!-- COMMENTS COLLAPSE -->
   <div class="ui fluid accordion">
 
   <div class="ui comments">
@@ -209,10 +206,10 @@
 
         <!-- COMMENT SECTION -->
 
-          <div class="ui fluid labeled input">
+          <div class="ui fluid mini labeled input">
             <div class="ui teal label">
                <div class="ui dropdown">
-                <div class="text">Category</div>
+                <i class="tags icon"></i>
                 <i class="dropdown icon"></i>
                 <div class="menu">
                   <div class="header">attribute</div>
