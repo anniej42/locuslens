@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"> </script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
@@ -16,10 +16,11 @@
     
     <!-- Set the viewport to show the page at a scale of 1.0, and make it non-scalable -->
     <!-- <meta name="viewport" content="initial-scale=1"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
     <!-- Make it fullscreen / hide the browser URL bar -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Locus lens">
     
     <!--
         Give the status bar another colour
@@ -27,7 +28,7 @@
         If set to "default" or "black", the content is displayed below the status bar. If set to
         "black-translucent", the content is displayed under the bar.
     -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -37,6 +38,8 @@
         Take note this file exactly needs to be 320x460 for iPhone or 1004x768 for iPad, and is a PNG file.
         Also, this only works if "apple-mobile-web-app-capable" is set to "yes".
     -->
+
+    <!-- SHOULD BE 640 x 1136 PX -->
     <link rel="apple-touch-startup-image" href="/startup.png" />
     
     <!--
@@ -57,14 +60,14 @@
     
     </script>
 
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    
+    <!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/> -->
 
 </head>
 <!-- <body ontouchmove="BlockElasticScroll(event);"> -->
 <body>
 
-<div class="ui secondary pointing menu">
+<div class="ui secondary pointing top sticky menu" style="padding-top:20px;">
   <a class="active item">
     <i class="home icon"></i>
   </a>
@@ -86,10 +89,14 @@
 </div>
 
 
+
 <!-- HIDDEN FILE SELECTOR -->
-<div class="hidden">
+<!-- <div class="hidden"> -->
+<div style="display:none !important;" >
   <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput"></p>
 </div>
+
+<div class="timeline">
 
 <div class="ui page dimmer">
   <div class="content">
@@ -232,12 +239,13 @@
 <!-- END TIMELINECARD -->
 </div>
 
-        
+<!-- END TIMELINE CONTAINER -->
+</div>
 
     
 <!-- HANDLEBARS TEMPLATING -->
 
-<div class="hidden templates">
+<div style="display:none !important;" class="templates">
 
  <!-- MEDIA TEMPLATE -->
   <div class="mediaTemplate">
@@ -300,9 +308,14 @@ function BlockElasticScroll(event) {
     event.preventDefault() ;
 }
 
+// custom button triggers native button
 $('#userUploadNew').click(function(){
   $('#cameraInput').click();
 })
+
+$('.ui.sticky')
+  .sticky();
+;
 
 // var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 // $('.iImage').width(width-20);

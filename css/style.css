@@ -52,3 +52,12 @@ margin-left: 10px;
 .hidden {
     display: none !important;
 }
+
+.menu{
+	right:auto;
+	top:auto;
+}
+
+.timeline{
+	margin-top: 50px;
+}
