@@ -48,3 +48,7 @@ margin-left: 10px;
 .mediaPhoto{
   /*height: 510px*/
 }
+
+.hidden {
+    display: none !important;
+}

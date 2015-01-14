@@ -114,7 +114,11 @@
     <div class="ui tiny buttons">
       <div class="ui button"><i class="star icon"></i> </div>
       <div class="or" data-text=" "></div>
-      <div class="ui positive button"><a class="llNameLink" href="/djustinserrano/">afuller</a><span> and </span><span class="llRemainingCount" >53</span><span > others  <i class="heart icon"></i> this.</div>
+      <div class="ui positive button">
+        <a class="llNameLink" href="/djustinserrano/">afuller</a><span> and </span><span class="llRemainingCount" >53</span> others <span> <i class="heart icon"></i> </span>this.
+      </div>
+    </div>
+
     </div>
         
 
@@ -130,78 +134,51 @@
       <i class="dropdown icon"></i>
         View comments
       </div>
-    <div class="content">
-          <div class="comment">
-            <a class="avatar">
-              <img src="/images/avatar/small/matt.jpg">
-            </a>
-            <div class="content">
-              <a class="author">Matt</a>
-              <div class="metadata">
-                <span class="date">Today at 5:42PM</span>
-              </div>
-              <div class="text">
-                How artistic!
-              </div>
-              <div class="actions">
-                <a class="reply">Reply</a>
-              </div>
+      <div class="content">
+        <div class="comment">
+          <a class="avatar">
+            <img src="/images/avatar/small/matt.jpg">
+          </a>
+          <div class="content">
+            <a class="author">Matt</a>
+            <div class="metadata">
+              <span class="date">Today at 5:42PM</span>
+            </div>
+            <div class="text">
+              How artistic!
             </div>
           </div>
-          <div class="comment">
-            <a class="avatar">
-              <img src="/images/avatar/small/elliot.jpg">
-            </a>
-            <div class="content">
-              <a class="author">Elliot Fu</a>
-              <div class="metadata">
-                <span class="date">Yesterday at 12:30AM</span>
-              </div>
-              <div class="text">
-                <p>This has been very useful for my research. Thanks as well!</p>
-              </div>
-              <div class="actions">
-                <a class="reply">Reply</a>
-              </div>
+        </div>
+
+        <div class="comment">
+          <a class="avatar">
+            <img src="/images/avatar/small/elliot.jpg">
+          </a>
+          <div class="content">
+            <a class="author">Elliot Fu</a>
+            <div class="metadata">
+              <span class="date">Yesterday at 12:30AM</span>
             </div>
-            <div class="comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="/images/avatar/small/jenny.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">Jenny Hess</a>
-                  <div class="metadata">
-                    <span class="date">Just now</span>
-                  </div>
-                  <div class="text">
-                    Elliot you are always so right :)
-                  </div>
-                  <div class="actions">
-                    <a class="reply">Reply</a>
-                  </div>
-                </div>
-              </div>
+            <div class="text">This has been very useful for my research. Thanks as well!</div>
+          </div>
+        </div>
+
+
+        <div class="comment">
+          <a class="avatar">
+            <img src="/images/avatar/small/joe.jpg">
+          </a>
+          <div class="content">
+            <a class="author">Joe Henderson</a>
+            <div class="metadata">
+              <span class="date">5 days ago</span>
+            </div>
+            <div class="text">
+              Dude, this is awesome. Thanks so much
             </div>
           </div>
-          <div class="comment">
-            <a class="avatar">
-              <img src="/images/avatar/small/joe.jpg">
-            </a>
-            <div class="content">
-              <a class="author">Joe Henderson</a>
-              <div class="metadata">
-                <span class="date">5 days ago</span>
-              </div>
-              <div class="text">
-                Dude, this is awesome. Thanks so much
-              </div>
-              <div class="actions">
-                <a class="reply">Reply</a>
-              </div>
-            </div>
-          </div>
-  </div>
+        </div>
+      </div>
 </div>
 
         <!-- COMMENT SECTION -->
@@ -225,14 +202,6 @@
               </div>
           </div>
           <input type="text" placeholder="add a tag..."> </div> 
-          <!-- <form class="ui reply form">
-            <div class="field">
-              <textarea></textarea>
-            </div>
-            <div class="ui blue labeled submit icon button">
-              <i class="icon edit"></i> Add Reply
-            </div>
-          </form> -->
         </div>
         
 
@@ -240,46 +209,45 @@
           <!-- <div class="ui blue labeled submit icon button"><i class="icon edit"></i> Add
 </div> -->
 
+<!-- END TIMELINECARD -->
+</div>
 
-        </div></div></div></div>
+        
 
-    <!-- <div class="hidden templates"> -->
-      <!-- MEDIA TEMPLATE -->
-<!--       <div class="mediaTemplate">
-        <div class="ui segment wrap mediaWrapper" mediaId="{{{_id}}}">
-          <div class="ui red deleteMedia button" mediaId="{{{_id}}}">
-            Delete
-          </div>
-          <a class="ui {{fancybox}} wrap" rel="gallery" title="{{caption}}" href="#{{linkableId}}" mediaId="{{{_id}}}">
-            <img class="thumb vcentered" src="{{{url}}}" alt="image uploaded by {{{_owner}}}">
+    
+<!-- HANDLEBARS TEMPLATING -->
 
-          </a>
-        </div>
+<div class="hidden templates">
+
+ <!-- MEDIA TEMPLATE -->
+  <div class="mediaTemplate">
+    <div class="ui segment wrap mediaWrapper" mediaId="{{{_id}}}">
+      <div class="ui red deleteMedia button" mediaId="{{{_id}}}">
+        Delete
       </div>
-     -->
-      <!-- COMMENT TEMPLATE -->
-<!--       <div class="commentTemplate">
-        <div class="comment wrapper" mediaId="{{{mediaId}}}" commentId="{{{_id}}}">
-          <div class="content">
-            <div class="fright">
-              <a class="author blue-text" href="{{{_owner}}}">
-                {{{owner}}}
-              </a>
-              <div class="ui label fright">
-                {{timestamp}}
-              </div>
-            </div>
-            <div class="text">
-              <div class="iconWrapper wrap">
-                <i class="ui hidden clickable red remove deleteComment icon" commentId="{{{_id}}}"></i>
-              </div>
-              {{content}}
-            </div>
-          </div>
-        </div>
-      </div>
+      <a class="ui {{fancybox}} wrap" rel="gallery" title="{{caption}}" href="#{{linkableId}}" mediaId="{{{_id}}}">
+        <img class="thumb vcentered" src="{{{url}}}" alt="image uploaded by {{{_owner}}}">
 
-    </div> --> 
+      </a>
+    </div>
+  </div>
+
+  <!-- COMMENT TEMPLATE -->
+  <div class="commentTemplate" mediaId="{{{mediaId}}}" commentId="{{{_id}}}">
+    <div class="comment">
+      <a class="avatar"> <img src="{{{ownerAvatar}}}"> </a> 
+      <div class="content">
+        <a class="author">{{{owner}}}</a>
+        <div class="metadata">
+          <span class="date">{{timestamp}}</span>
+        </div>
+        <div class="text" commentId="{{{_id}}}"> {{content}} </div> 
+      </div>
+    </div>
+  </div>
+
+// <!-- END HIDDEN TEMPLATES -->
+</div> 
 
 
 <script>
