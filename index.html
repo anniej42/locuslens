@@ -67,12 +67,14 @@
 <!-- <body ontouchmove="BlockElasticScroll(event);"> -->
 <body>
 
+<!-- ##### MENU ##### -->
+
 <div class="ui inverted secondary pointing fixed menu" style="background-color:rgba(0, 0, 0, 0.9); padding-top: 20px;">
   <!-- <div class="menuContainer" > -->
-    <a class="active item">
+    <a class="active item" id="goHome">
       <i class="home icon"></i>
     </a>
-    <a class="item">
+    <a class="item" id="goUser">
       <i class="user icon"></i>
     </a>
     
@@ -93,18 +95,18 @@
         <i class="add circle icon" id="userUploadNew"></i>
       </a>
     </div>
-  <!-- </div> -->
-</div>
+  </div>
 
 
 
 <!-- HIDDEN FILE SELECTOR -->
-<!-- <div class="hidden"> -->
 <div style="display:none !important;" >
   <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput"></p>
 </div>
 
-<div class="timeline" style="margin-top:80px;">
+
+<!-- ##### TIMELINE ##### -->
+<div class="timeline" style="margin-top:80px;" id="timeline">
 
   <!-- USER ADD COMMENT DIMMER -->
   <div class="ui page dimmer" id="commentDimmer">
@@ -144,7 +146,7 @@
   </div>
 
   <!-- SEARCH DIMMER -->
-    <div class="ui page dimmer" id="searchDimmer">
+  <div class="ui page dimmer" id="searchDimmer">
     <div class="content">
       <div class="center">
         
@@ -161,124 +163,132 @@
   </div>
 
 
-<div class="timelineCard ui segment">
-  <!-- <div class="mediaPhoto">
-    <span class="i-like-big"></span>
-    <div src="sample.jpg" class="mpFrame Frame Image" >
-    <div class="iImage" style="background-image:url(sample.jpg);"></div></div>
-  </div> -->
+  <div class="timelineCard ui segment">
 
-<!--   <a class="ui image label">
-    Rory Riggs
-    <span class=" detail">Just now</span>
-  </a>
-  <div class="ui divider"></div> -->
+      <!-- OLD LABEL STYLE:  <a class="ui image label">
+          Rory Riggs
+          <span class=" detail">Just now</span>
+        </a>
+        <div class="ui divider"></div> -->
 
-
-  <div class="ui raised segment">
-     <a class="ui teal ribbon label">Rory Riggs <span class=" detail">Just now</span> </a>
-    <img class="ui centered image iImage" style="padding-top:10px;" src="sample.jpg">
+    <!-- ##### IMAGE ##### -->
+    <div class="ui raised segment">
+      <a class="ui teal ribbon label">Rory Riggs <span class=" detail">Just now</span> </a>
+      <img class="ui centered image iImage" style="padding-top:10px;" src="sample.jpg">
     </div>
 
 
-  <div class="ui horizontal divider"> <i class="heart icon"></i> </div>
+    <div class="ui horizontal divider"> <i class="heart icon"></i> </div>
 
-    <!-- <div class="timelineLikes"><a href="javascript:;" title="Toggle like" class="timelineLikeButton"> -->
-
+    <!-- LIKES  -->
     <div class="timelineLikes">  
-
-    <div class="ui tiny buttons">
-      <div class="ui button"><i class="star icon"></i> </div>
-      <div class="or" data-text=" "></div>
-      <div class="ui positive button">
-        <a class="llNameLink" href="/djustinserrano/">afuller</a><span> and </span><span class="llRemainingCount" >53</span> others <span> <i class="heart icon"></i> </span>this.
+      <div class="ui tiny buttons">
+        <div class="ui button"><i class="star icon"></i> </div>
+        <div class="or" data-text=" "></div>
+        <div class="ui positive button">
+          <a class="llNameLink" href="/djustinserrano/">afuller</a><span> and </span><span class="llRemainingCount" >53</span> others <span> <i class="heart icon"></i> </span>this.
+        </div>
       </div>
-    </div>
-
     </div>
         
 
-  <!-- DIVIDER FOR COMMENTS -->
-  <div class="ui horizontal divider"> <i class="large write icon button userAddComment"></i> </div>
+    <!-- DIVIDER FOR COMMENTS -->
+    <div class="ui horizontal divider"> <i class="large circular write icon button userAddComment"></i> </div>
 
-  <!-- COMMENTS COLLAPSE -->
-  <div class="ui fluid accordion">
-    <div class="ui comments">
-      <div class="title">
-        <i class="dropdown icon"></i>
-          View 3 existing tags
-      </div>
-
-      <!-- CONTENT OF ACCORDION -->
-      <div class="content">
-
-        <!-- COMMENT # 1  -->
-        <div class="comment">
-          <a class="avatar">
-            <img src="/images/avatar/small/matt.jpg">
-          </a>
-          <div class="content">
-            <a class="author">Matt</a>
-            <div class="metadata">
-              <span class="date">Today at 5:42PM</span>
-            </div>
-            <div class="text">
-              #FIELD1 A4ii
-            </div>
-          </div>
+    <!-- COMMENTS COLLAPSE -->
+    <div class="ui fluid accordion">
+      <div class="ui comments">
+        <div class="title">
+          <i class="dropdown icon"></i>
+            View 3 existing tags
         </div>
 
-        <!-- COMMENT # 2  -->
-        <div class="comment">
-          <a class="avatar">
-            <img src="/images/avatar/small/elliot.jpg">
-          </a>
-          <div class="content">
-            <a class="author">Elliot Fu</a>
-            <div class="metadata">
-              <span class="date">Yesterday at 12:30AM</span>
-            </div>
-            <div class="text">#INDUSTRY real estate</div>
-          </div>
-        </div>
+        <!-- CONTENT OF ACCORDION -->
+        <div class="content">
 
-        <!-- COMMENT # 3  -->
-        <div class="comment">
-          <a class="avatar">
-            <img src="/images/avatar/small/joe.jpg">
-          </a>
-          <div class="content">
-            <a class="author">Joe Henderson</a>
-            <div class="metadata">
-              <span class="date">5 days ago</span>
+          <!-- COMMENT # 1  -->
+          <div class="comment">
+            <a class="avatar">
+              <img src="/images/avatar/small/matt.jpg">
+            </a>
+            <div class="content">
+              <a class="author">Matt</a>
+              <div class="metadata">
+                <span class="date">Today at 5:42PM</span>
+              </div>
+              <div class="text">
+                #FIELD1 A4ii
+              </div>
             </div>
-            <div class="text">
-              #FIELD2 1.3.2
+          </div>
+
+          <!-- COMMENT # 2  -->
+          <div class="comment">
+            <a class="avatar">
+              <img src="/images/avatar/small/elliot.jpg">
+            </a>
+            <div class="content">
+              <a class="author">Elliot Fu</a>
+              <div class="metadata">
+                <span class="date">Yesterday at 12:30AM</span>
+              </div>
+              <div class="text">#INDUSTRY real estate</div>
+            </div>
+          </div>
+
+          <!-- COMMENT # 3  -->
+          <div class="comment">
+            <a class="avatar">
+              <img src="/images/avatar/small/joe.jpg">
+            </a>
+            <div class="content">
+              <a class="author">Joe Henderson</a>
+              <div class="metadata">
+                <span class="date">5 days ago</span>
+              </div>
+              <div class="text">
+                #FIELD2 1.3.2
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
-
-
-        </div>
         
-
-        <!-- <input type="text" placeholder="Write a comment..." class="fadedTextField timelineCommentTextField" ></form> -->
-          <!-- <div class="ui blue labeled submit icon button"><i class="icon edit"></i> Add
-</div> -->
-
-<!-- END TIMELINECARD -->
-</div>
+  <!-- END TIMELINECARD -->
+  </div>
 
 <!-- END TIMELINE CONTAINER -->
 </div>
 
-    
-<!-- HANDLEBARS TEMPLATING -->
 
+<!-- ##### BEGIN USER PROFILE ##### -->
+
+<div class="ui fluid card" style="display:none;" id="userPage">
+  <div class="image">
+    <img src="sample.jpg">
+  </div>
+  <div class="content">
+    <a class="header">Stevie Feliciano</a>
+    <div class="meta">
+      <span class="date">Joined in 2014</span>
+    </div>
+    <div class="description">
+      Stevie Feliciano is a library scientist living in New York City. She likes to spend her time reading, running, and writing.
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="user icon"></i>
+      22 Friends
+    </a>
+  </div>
+</div>
+
+
+
+
+<!-- HANDLEBARS TEMPLATING -->
 <div style="display:none !important;" class="templates">
 
  <!-- MEDIA TEMPLATE -->
@@ -355,6 +365,7 @@ $('#userUploadNew').click(function(){
 $('.ui.sticky')
   .sticky();
 ;
+
 
 // var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 // $('.iImage').width(width-20);
