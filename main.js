@@ -43,9 +43,18 @@ $('.ui.sticky')
 
 
 // # NAVIGATION
-$('#goUser').click(function(){
-  $('')
-})
+
+function toggle(){
+  $('#goUser').toggleClass("active");
+  $('#goHome').toggleClass("active");
+
+  $('#timeline').toggle()
+  $('#userPage').toggle()
+}
+
+$('#goUser').click(toggle);
+$('#goHome').click(toggle);
+
 
 
 // var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;

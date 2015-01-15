@@ -46,9 +46,6 @@ margin-left: 10px;
   padding: 5px;
 }
 
-.mediaPhoto{
-  /*height: 510px*/
-}
 
 .hidden {
     display: none !important;
@@ -61,7 +58,23 @@ margin-left: 10px;
 	margin-bottom: 20px;
 }
 
-.timeline{
+.timeline {
+	margin-top: 70px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.userPage {
 	margin-top: 70px;
 	padding-top:20px;
+}
+
+.feed, .timelineLikes, .accordion{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.timelineLikes{
+	padding-bottom: 0;
 }
