@@ -1,0 +1,61 @@
+<!-- HANDLEBARS TEMPLATING -->
+<div class="hidden tlcard templates">
+
+  <!-- TIMELINECARD TEMPLATE -->
+  <div class="timelineCard fluid card ui segment">=
+    <!-- IMAGE TEMPLATE -->
+    <div class="ui raised segment">
+      <a class="ui teal ribbon label">{{owner}} <span class=" detail">{{timestamp}}</span> </a>
+      <img class="ui centered image" style="padding-top:10px;" src="{{{url}}}" mediaId={{{_id}}}>
+    </div>
+
+    <!-- <div class="ui horizontal divider"> <i class="heart icon"></i> </div> -->
+
+    <!-- LIKES  -->
+    <div class="timelineLikes">  
+      <div class="ui tiny buttons">
+        <div class="ui button"><i class="star icon"></i> </div>
+        <div class="or" data-text=" "></div>
+        <div class="ui positive button">
+          <a class="llNameLink" >afuller</a><span> and </span><span class="llRemainingCount" >{{llRemainingCount}}</span> others <span> <i class="heart icon"></i> </span>this.
+        </div>
+      </div>
+    </div>
+
+    <div class="ui horizontal divider"> <a><i class="circular write icon button userAddComment"></i></a> </div>
+
+    <!-- COMMENTS COLLAPSE -->
+    <div class="ui fluid accordion">
+      <div class="ui comments">
+        <div class="title">
+          <i class="dropdown icon"></i>
+            View {{tagCount}} existing tags
+        </div>
+
+        <!-- CONTENT OF ACCORDION -->
+        <div class="tagContent content" mediaId={{{_id}}}>
+        </div>
+      </div>
+    </div>
+        
+  <!-- END TIMELINECARD -->
+  </div>
+
+
+</div> 
+
+  <!-- TAG TEMPLATE -->
+  <div class="commentTemplate" mediaId="{{{mediaId}}}" commentId="{{{_id}}}">
+    <div class="comment">
+      <a class="avatar"> <img src="{{{ownerAvatar}}}"> </a> 
+      <div class="content">
+        <a class="author">{{{owner}}}</a>
+        <div class="metadata">
+          <span class="date">{{timestamp}}</span>
+        </div>
+        <div class="text" commentId="{{{_id}}}"> {{commentText}} </div> 
+      </div>
+    </div>
+  </div>
+
+// <!-- END HIDDEN TEMPLATES -->

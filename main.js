@@ -48,14 +48,12 @@ function toggle(){
   $('#goUser').toggleClass("active");
   $('#goHome').toggleClass("active");
 
-  $('#timeline').toggle()
-  $('#userPage').toggle()
+  $('#timeline').toggleClass("hidden");
+  $('#userPage').toggleClass("hidden");
 }
 
 $('#goUser').click(toggle);
 $('#goHome').click(toggle);
-
-
 
 // var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 // $('.iImage').width(width-20);

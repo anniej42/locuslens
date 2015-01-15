@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    
     
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"> </script> -->
@@ -111,61 +111,6 @@
 <!-- ##### TIMELINE ##### -->
 <div class="timeline" style="margin-top:80px;" id="timeline">
 
-  <!-- USER ADD COMMENT DIMMER -->
-  <div class="ui page dimmer" id="commentDimmer">
-    <div class="content">
-      <div class="center">
-        
-        <!-- NEW COMMENT -->
-
-        <div class="ui fluid labeled action input">
-          <div class="ui teal label">
-             <div class="ui dropdown">
-              <i class="tags icon"></i>
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <div class="header">attribute</div>
-                <div class="item">A</div>
-                <div class="item">B</div>
-                <div class="item">C</div>
-                <div class="divider"></div>
-                <!-- <div class="header">D</div> -->
-                <div class="item">D</div>
-                <div class="item">E</div>
-                <div class="item">F</div>
-              </div>
-            </div>
-          </div>
-
-          <input type="text" placeholder="add a tag..."> 
-          <div class="ui label button" id>
-            <i class="add icon"></i>
-          </div> 
-        </div> 
-
-
-      </div>
-    </div>
-  </div>
-
-  <!-- SEARCH DIMMER -->
-  <div class="ui page dimmer" id="searchDimmer">
-    <div class="content">
-      <div class="center">
-        
-        <!-- NEW COMMENT -->
-
-        <div class="ui fluid inverted left icon input">
-          <input type="text" placeholder="Search...">
-          <i class="search icon"></i>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-
-
   <div class="timelineCard fluid card ui segment">
 
       <!-- OLD LABEL STYLE:  <a class="ui image label">
@@ -195,7 +140,7 @@
         
 
     <!-- DIVIDER FOR COMMENTS -->
-    <div class="ui horizontal divider"> <i class="large circular write icon button userAddComment"></i> </div>
+    <div class="ui horizontal divider"> <a><i class="circular write icon button userAddComment"></i></a> </div>
 
     <!-- COMMENTS COLLAPSE -->
     <div class="ui fluid accordion">
@@ -266,11 +211,11 @@
 
 <!-- ##### BEGIN USER PROFILE ##### -->
 
-<div class="userPage" style="display:none;" id="userPage">
+<div class="hidden userPage"  id="userPage">
   <div class="centered feed" >
   <div class="ui fluid card">
     <div class="image">
-      <img src="sample.jpg">
+      <img src="user.jpg">
     </div>
     <div class="content">
       <a class="header">Stevie Feliciano</a>
@@ -292,43 +237,65 @@
 </div>
 
 
-<!-- HANDLEBARS TEMPLATING -->
-<div style="display:none !important;" class="templates">
+<!-- ##### DIMMERS ##### -->
+<!-- USER ADD COMMENT DIMMER -->
+<div class="ui page dimmer" id="commentDimmer">
+  <div class="content">
+    <div class="center">
+      
+      <!-- NEW COMMENT -->
 
- <!-- MEDIA TEMPLATE -->
-  <div class="mediaTemplate">
-    <div class="ui segment wrap mediaWrapper" mediaId="{{{_id}}}">
-      <div class="ui red deleteMedia button" mediaId="{{{_id}}}">
-        Delete
-      </div>
-      <a class="ui {{fancybox}} wrap" rel="gallery" title="{{caption}}" href="#{{linkableId}}" mediaId="{{{_id}}}">
-        <img class="thumb vcentered" src="{{{url}}}" alt="image uploaded by {{{_owner}}}">
-
-      </a>
-    </div>
-  </div>
-
-  <!-- COMMENT TEMPLATE -->
-  <div class="commentTemplate" mediaId="{{{mediaId}}}" commentId="{{{_id}}}">
-    <div class="comment">
-      <a class="avatar"> <img src="{{{ownerAvatar}}}"> </a> 
-      <div class="content">
-        <a class="author">{{{owner}}}</a>
-        <div class="metadata">
-          <span class="date">{{timestamp}}</span>
+      <div class="ui fluid labeled action input">
+        <div class="ui teal label">
+           <div class="ui dropdown">
+            <i class="tags icon"></i>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <div class="header">attribute</div>
+              <div class="item">A</div>
+              <div class="item">B</div>
+              <div class="item">C</div>
+              <div class="divider"></div>
+              <!-- <div class="header">D</div> -->
+              <div class="item">D</div>
+              <div class="item">E</div>
+              <div class="item">F</div>
+            </div>
+          </div>
         </div>
-        <div class="text" commentId="{{{_id}}}"> {{content}} </div> 
-      </div>
+
+        <input type="text" placeholder="add a tag..."> 
+        <div class="ui label button" id>
+          <i class="add icon"></i>
+        </div> 
+      </div> 
+
+
     </div>
   </div>
+</div>
 
-// <!-- END HIDDEN TEMPLATES -->
-</div> 
+<!-- SEARCH DIMMER -->
+<div class="ui page dimmer" id="searchDimmer">
+  <div class="content">
+    <div class="center">
+      
+      <!-- NEW COMMENT -->
+
+      <div class="ui fluid inverted left icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>
 
 
-<script>
+    </div>
+  </div>
+</div>
 
-</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
 <script src="main.js"> </script>
 
 </body>
