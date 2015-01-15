@@ -56,13 +56,12 @@ margin-left: 10px;
 .menu{
 	right:auto;
 	top:auto;
-	color: white;
+	/*padding-top: 20px;*/
+	margin-bottom: 20px;
+	position: absolute;
 }
 
 .timeline{
-	margin-top: 50px;
-}
-
-.menuContainer{
-	background-color: white;
+	margin-top: 70px;
+	padding-top:20px;
 }
