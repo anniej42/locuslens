@@ -54,11 +54,10 @@ margin-left: 10px;
 }
 
 .menu{
-	right:auto;
-	top:auto;
+	/*right:auto;*/
+	/*top:auto;*/
 	/*padding-top: 20px;*/
 	margin-bottom: 20px;
-	position: absolute;
 }
 
 .timeline{
