@@ -130,10 +130,10 @@
     <!-- LIKES  -->
     <div class="timelineLikes">  
       <div class="ui tiny buttons">
-        <div class="ui button"><i class="star icon"></i> </div>
+        <div class="ui toggle button" id="userHighFive"><i class="star icon"></i> </div>
         <div class="or" data-text=" "></div>
         <div class="ui positive button">
-          <a class="llNameLink" href="/djustinserrano/">afuller</a><span> and </span><span class="llRemainingCount" >53</span> others <span> <i class="heart icon"></i> </span>this.
+          <div class="likes" > <span id="numLikes">54</span> <span> <i class="heart icon"></i> </span>this.</div>
         </div>
       </div>
     </div>
@@ -156,10 +156,10 @@
           <!-- COMMENT # 1  -->
           <div class="comment">
             <a class="avatar">
-              <img src="/images/avatar/small/matt.jpg">
+              <img src="alice.jpg">
             </a>
             <div class="content">
-              <a class="author">Matt</a>
+              <a class="author">Alice</a>
               <div class="metadata">
                 <span class="date">Today at 5:42PM</span>
               </div>
@@ -172,7 +172,7 @@
           <!-- COMMENT # 2  -->
           <div class="comment">
             <a class="avatar">
-              <img src="/images/avatar/small/elliot.jpg">
+              <img src="elliot.jpg">
             </a>
             <div class="content">
               <a class="author">Elliot Fu</a>
@@ -186,10 +186,10 @@
           <!-- COMMENT # 3  -->
           <div class="comment">
             <a class="avatar">
-              <img src="/images/avatar/small/joe.jpg">
+              <img src="steve.jpg">
             </a>
             <div class="content">
-              <a class="author">Joe Henderson</a>
+              <a class="author">Steve Henderson</a>
               <div class="metadata">
                 <span class="date">5 days ago</span>
               </div>
@@ -213,26 +213,124 @@
 
 <div class="hidden userPage"  id="userPage">
   <div class="centered feed" >
-  <div class="ui fluid card">
-    <div class="image">
-      <img src="user.jpg">
-    </div>
-    <div class="content">
-      <a class="header">Stevie Feliciano</a>
-      <div class="meta">
-        <span class="date">Joined in 2014</span>
+    
+    <!-- PROFILE CARD -->
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="user.jpg">
       </div>
-      <div class="description">
-        Stevie Feliciano is a library scientist living in New York City. She likes to spend her time reading, running, and writing.
+      <div class="content">
+        <a class="header">Alice Smith</a>
+        <div class="meta">
+          <span class="email">asmith@locus.co</span>
+        </div>
+        <div class="description">
+          Alice is an analyist at locus.
+        </div>
+      </div>
+      <div class="extra content">
+        <a>
+          <i class="file image outline icon"></i>
+          2 Uploads
+        </a>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-        22 Friends
-      </a>
+
+    <!-- PREVIOUS UPLOADS -->
+    <div class="timelineCard fluid card ui segment">
+
+        <!-- OLD LABEL STYLE:  <a class="ui image label">
+            Rory Riggs
+            <span class=" detail">Just now</span>
+          </a>
+          <div class="ui divider"></div> -->
+
+      <!-- ##### IMAGE ##### -->
+      <div class="ui raised segment">
+        <a class="ui teal ribbon label">Alice Smith <span class=" detail">2 hours ago</span> </a>
+        <img class="ui centered image" style="padding-top:10px;" src="sample.jpg">
+      </div>
+
+      <!-- <div class="ui horizontal divider"> <i class="heart icon"></i> </div> -->
+
+      <!-- LIKES  -->
+      <div class="timelineLikes">  
+        <div class="ui tiny buttons">
+          <div class="ui toggle button"><i class="star icon"></i> </div>
+          <div class="or" data-text=" "></div>
+          <div class="ui positive button">
+            <a class="numLikes" > 54 <i class="heart icon"></i> </span>this.
+          </div>
+        </div>
+      </div>
+          
+
+      <!-- DIVIDER FOR COMMENTS -->
+      <div class="ui horizontal divider"> <a><i class="circular write icon button userAddComment"></i></a> </div>
+
+      <!-- COMMENTS COLLAPSE -->
+      <div class="ui fluid accordion">
+        <div class="ui comments">
+          <div class="title">
+            <i class="dropdown icon"></i>
+              View 3 existing tags
+          </div>
+
+          <!-- CONTENT OF ACCORDION -->
+          <div class="content">
+
+            <!-- COMMENT # 1  -->
+            <div class="comment">
+              <a class="avatar">
+                <img src="alice.jpg">
+              </a>
+              <div class="content">
+                <a class="author">Alice</a>
+                <div class="metadata">
+                  <span class="date">Today at 5:42PM</span>
+                </div>
+                <div class="text">
+                  #FIELD1 A4ii
+                </div>
+              </div>
+            </div>
+
+            <!-- COMMENT # 2  -->
+            <div class="comment">
+              <a class="avatar">
+                <img src="elliot.jpg">
+              </a>
+              <div class="content">
+                <a class="author">Elliot Fu</a>
+                <div class="metadata">
+                  <span class="date">Yesterday at 12:30AM</span>
+                </div>
+                <div class="text">#INDUSTRY real estate</div>
+              </div>
+            </div>
+
+            <!-- COMMENT # 3  -->
+            <div class="comment">
+              <a class="avatar">
+                <img src="steve.jpg">
+              </a>
+              <div class="content">
+                <a class="author">Steve Henderson</a>
+                <div class="metadata">
+                  <span class="date">5 days ago</span>
+                </div>
+                <div class="text">
+                  #FIELD2 1.3.2
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+    <!-- END TIMELINECARD -->
     </div>
-  </div>
+
   </div>
 </div>
 

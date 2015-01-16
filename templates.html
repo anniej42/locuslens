@@ -1,5 +1,5 @@
 <!-- HANDLEBARS TEMPLATING -->
-<div class="hidden tlcard templates">
+<div class="hidden TLCardTemplate templates">
 
   <!-- TIMELINECARD TEMPLATE -->
   <div class="timelineCard fluid card ui segment">=
@@ -32,7 +32,7 @@
             View {{tagCount}} existing tags
         </div>
 
-        <!-- CONTENT OF ACCORDION -->
+        <!-- LOAD EXISTING TAGS HERE -->
         <div class="tagContent content" mediaId={{{_id}}}>
         </div>
       </div>
@@ -45,17 +45,17 @@
 </div> 
 
   <!-- TAG TEMPLATE -->
-  <div class="commentTemplate" mediaId="{{{mediaId}}}" commentId="{{{_id}}}">
-    <div class="comment">
-      <a class="avatar"> <img src="{{{ownerAvatar}}}"> </a> 
-      <div class="content">
-        <a class="author">{{{owner}}}</a>
-        <div class="metadata">
-          <span class="date">{{timestamp}}</span>
-        </div>
-        <div class="text" commentId="{{{_id}}}"> {{commentText}} </div> 
+<div class="hidden tagTemplate templates" mediaId="{{{mediaId}}}" commentId="{{{_id}}}">
+  <div class="comment">
+    <a class="avatar"> <img src="{{{ownerAvatar}}}"> </a> 
+    <div class="content">
+      <a class="author">{{{owner}}}</a>
+      <div class="metadata">
+        <span class="date">{{timestamp}}</span>
       </div>
+      <div class="text" commentId="{{{_id}}}"> {{commentText}} </div> 
     </div>
   </div>
+</div>
 
 // <!-- END HIDDEN TEMPLATES -->

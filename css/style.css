@@ -74,7 +74,10 @@ margin-left: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 20px;
+    margin: 10px;
+    margin-top: 0;
 }
+
 
 .timelineLikes{
 	padding-bottom: 0;
