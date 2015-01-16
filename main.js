@@ -33,8 +33,11 @@ function BlockElasticScroll(event) {
 }
 
 // custom button triggers native button
+
 $('#userUploadNew').click(function(){
   $('#cameraInput').click();
+  $('#uploadDimmer')
+    .dimmer('show');
 })
 
 $('.ui.sticky')
@@ -65,5 +68,16 @@ $('#userHighFive').click(function(){
   }
 })
 
-// var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-// $('.iImage').width(width-20);
+// UPLOAD IMAGE PREVIEW 
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#userUploadPreview')
+        .attr('src', e.target.result);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+  $("#imageLoader").toggle();
+}
