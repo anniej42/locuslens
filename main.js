@@ -46,18 +46,27 @@ $('.ui.sticky')
 ;
 
 
-// # NAVIGATION
+// NAVIGATION
 
 function toggle(){
-  $('#goUser').toggleClass("active");
-  $('#goHome').toggleClass("active");
+  $('.item').attr("class", "item");
+  $(this).addClass("active");
 
-  $('#timeline').toggleClass("hidden");
-  $('#userPage').toggleClass("hidden");
+  // NAVIGATING THE VIEW
+  var toActivate = "page"+this.id.substring(2);
+  var pageIds = ['pageHome', 'pageUser', 'pageSearch']
+  for (var i = 0; i<pageIds.length; i++){
+    if (toActivate == pageIds[i]){
+      $('#'+toActivate).removeClass("hidden");
+    } else {
+      $('#'+pageIds[i]).addClass("hidden");
+    }
+  }
 }
 
 $('#goUser').click(toggle);
 $('#goHome').click(toggle);
+$('#goSearch').click(toggle);
 
 $('#userHighFive').click(function(){
   $('#userHighFive').toggleClass("active");

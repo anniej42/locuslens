@@ -72,7 +72,7 @@
 
 <!-- ##### MENU ##### -->
 
-<div class="ui inverted secondary pointing fixed menu" style="background-color:rgba(0, 0, 0, 0.9); padding-top: 20px;">
+<div class="ui inverted secondary pointing fixed menu" style="background-color:rgba(0, 0, 0, 0.9); padding-top: 20px;" id="fixedMenu">
   <!-- <div class="menuContainer" > -->
     <a class="active item" id="goHome">
       <i class="home icon"></i>
@@ -80,6 +80,11 @@
     <a class="item" id="goUser">
       <i class="user icon"></i>
     </a>
+
+    <a class="item" id="goSearch">
+      <i class="inverted search icon" id = "userSearch"></i>
+    </a>
+
     
     <div class="right menu">
 
@@ -90,9 +95,6 @@
         </div>
       </div> -->
 
-      <a class="item">
-        <i class="inverted search icon" id = "userSearch"></i>
-      </a>
 
       <a class="item">
         <i class="add circle icon" id="userUploadNew"></i>
@@ -109,7 +111,7 @@
 
 
 <!-- ##### TIMELINE ##### -->
-<div class="timeline" style="margin-top:80px;" id="timeline">
+<div class="timeline" style="margin-top:80px;" id="pageHome">
 
   <div class="timelineCard fluid card ui segment">
 
@@ -211,7 +213,7 @@
 
 <!-- ##### BEGIN USER PROFILE ##### -->
 
-<div class="hidden userPage"  id="userPage">
+<div class="hidden userPage"  id="pageUser">
   <div class="centered feed" >
     
     <!-- PROFILE CARD -->
@@ -236,104 +238,15 @@
       </div>
     </div>
 
-    <!-- PREVIOUS UPLOADS -->
-    <div class="timelineCard fluid card ui segment">
-
-        <!-- OLD LABEL STYLE:  <a class="ui image label">
-            Rory Riggs
-            <span class=" detail">Just now</span>
-          </a>
-          <div class="ui divider"></div> -->
-
-      <!-- ##### IMAGE ##### -->
-      <div class="ui raised segment">
-        <a class="ui teal ribbon label">Alice Smith <span class=" detail">2 hours ago</span> </a>
-        <img class="ui centered image" style="padding-top:10px;" src="presets/sample.jpg">
-      </div>
-
-      <!-- <div class="ui horizontal divider"> <i class="heart icon"></i> </div> -->
-
-      <!-- LIKES  -->
-      <div class="timelineLikes">  
-        <div class="ui tiny buttons">
-          <div class="ui toggle button" id="userHighFivePrev"><i class="star icon"></i> </div>
-          <div class="or" data-text=" "></div>
-          <div class="ui positive button" id="numLikesFieldPrev">
-            <div class="likes" > <span id="numLikesPrev">33</span> <span> <i class="heart icon"></i> </span>this.</div>
-          </div>
-        </div>
-      </div>
-          
-
-      <!-- DIVIDER FOR COMMENTS -->
-      <div class="ui horizontal divider"> <a><i class="circular write icon button userAddComment"></i></a> </div>
-
-      <!-- COMMENTS COLLAPSE -->
-      <div class="ui fluid accordion">
-        <div class="ui comments">
-          <div class="title">
-            <i class="dropdown icon"></i>
-              View 3 existing tags
-          </div>
-
-          <!-- CONTENT OF ACCORDION -->
-          <div class="content">
-
-            <!-- COMMENT # 1  -->
-            <div class="comment">
-              <a class="avatar">
-                <img src="presets/alice.jpg">
-              </a>
-              <div class="content">
-                <a class="author">Alice</a>
-                <div class="metadata">
-                  <span class="date">Today at 5:42PM</span>
-                </div>
-                <div class="text">
-                  #FIELD1 A4ii
-                </div>
-              </div>
-            </div>
-
-            <!-- COMMENT # 2  -->
-            <div class="comment">
-              <a class="avatar">
-                <img src="presets/elliot.jpg">
-              </a>
-              <div class="content">
-                <a class="author">Elliot Fu</a>
-                <div class="metadata">
-                  <span class="date">Yesterday at 12:30AM</span>
-                </div>
-                <div class="text">#INDUSTRY real estate</div>
-              </div>
-            </div>
-
-            <!-- COMMENT # 3  -->
-            <div class="comment">
-              <a class="avatar">
-                <img src="presets/steve.jpg">
-              </a>
-              <div class="content">
-                <a class="author">Steve Henderson</a>
-                <div class="metadata">
-                  <span class="date">5 days ago</span>
-                </div>
-                <div class="text">
-                  #FIELD2 1.3.2
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-          
-    <!-- END TIMELINECARD -->
-    </div>
-
   </div>
 </div>
 
+<!-- SEARCH PAGE -->
+<div class="hidden userPage"  id="pageSearch">
+  <div class="centered feed" >
+    
+  </div>
+</div>
 
 <!-- ##### DIMMERS ##### -->
 
@@ -374,22 +287,7 @@
   </div>
 </div>
 
-<!-- SEARCH DIMMER -->
-<div class="ui page dimmer" id="searchDimmer">
-  <div class="content">
-    <div class="center">
-      
-      <!-- NEW COMMENT -->
 
-      <div class="ui fluid inverted left icon input">
-        <input type="text" placeholder="Search...">
-        <i class="search icon"></i>
-      </div>
-
-
-    </div>
-  </div>
-</div>
 
 <!-- UPLOAD DIMMER -->
 <div class="ui page dimmer" id="uploadDimmer">

@@ -4,8 +4,8 @@
   <!-- TIMELINECARD TEMPLATE -->
   <div class="timelineCard fluid card ui segment">=
     <!-- IMAGE TEMPLATE -->
-    <div class="ui raised segment">
-      <a class="ui teal ribbon label">{{owner}} <span class=" detail">{{timestamp}}</span> </a>
+    <div class="ui raised segment" mediaId ={{{_id}}}>
+      <a class="ui teal ribbon label" mediaid={{{_id}}}>{{owner}} <span class=" detail">{{timestamp}}</span> </a>
       <img class="ui centered image" style="padding-top:10px;" src="{{{url}}}" mediaId={{{_id}}}>
     </div>
 
@@ -17,12 +17,12 @@
         <div class="ui toggle button" id="userHighFive"><i class="star icon"></i> </div>
         <div class="or" data-text=" "></div>
         <div class="ui positive button" id="numLikesField">
-          <div class="likes" > <span id="numLikes" mediaId={{{_id}}}>{{likeCount}}</span> <span> <i class="heart icon"></i> </span>this.</div>
+          <div class="likes" > <span id="numLikes" mediaId={{{_id}}}>{{likeCount}}</span> <span> <i class="star icon"></i> </span>this.</div>
         </div>
       </div>
     </div>
 
-    <div class="ui horizontal divider"> <a><i class="circular write icon button userAddComment"></i></a> </div>
+    <div class="ui horizontal divider"> <a mediaId ={{{_id}}}><i class="circular write icon button userAddComment"></i></a> </div>
 
     <!-- COMMENTS COLLAPSE -->
     <div class="ui fluid accordion">
@@ -43,7 +43,7 @@
 </div> 
 
 <!-- TAG TEMPLATE -->
-<div class="hidden tagTemplate templates" mediaId="{{{mediaId}}}" commentId="{{{_id}}}">
+<div class="hidden tagTemplate templates" mediaId="{{{mediaId}}}" tagId="{{{_id}}}">
   <div class="comment">
     <a class="avatar"> <img src="{{{ownerAvatar}}}"> </a> 
     <div class="content">
@@ -51,7 +51,7 @@
       <div class="metadata">
         <span class="date">{{timestamp}}</span>
       </div>
-      <div class="text" commentId="{{{_id}}}"> {{commentText}} </div> 
+      <div class="text" tagId="{{{_id}}}"> {{commentText}} </div> 
     </div>
   </div>
 </div>
