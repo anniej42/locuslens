@@ -55,5 +55,14 @@ function toggle(){
 $('#goUser').click(toggle);
 $('#goHome').click(toggle);
 
+$('#userHighFive').click(function(){
+  $('#userHighFive').toggleClass("active");
+  if ($('#userHighFive').hasClass("active")){
+    $('#numLikes').html(parseInt($('#numLikes').html())+1);
+  } else {
+    $('#numLikes').html(parseInt($('#numLikes').html())-1);
+  }
+})
+
 // var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 // $('.iImage').width(width-20);
