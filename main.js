@@ -81,3 +81,8 @@ function readURL(input) {
   }
   $("#imageLoader").toggle();
 }
+
+$("#userCancelUpload").click(function(){
+  $('#imageLoader').dimmer('hide');
+  $('#uploadDimmer').dimmer('hide');
+})
