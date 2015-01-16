@@ -78,16 +78,6 @@ $('#userHighFive').click(function(){
   }
 })
 
-$('#userHighFivePrev').click(function(){
-  $('#userHighFivePrev').toggleClass("active");
-  if ($('#userHighFivePrev').hasClass("active")){
-    $('#numLikesPrev').html(parseInt($('#numLikesPrev').html())+1);
-    $('#numLikesFieldPrev').transition('pulse');
-  } else {
-    $('#numLikesPrev').html(parseInt($('#numLikesPrev').html())-1);
-  }
-})
-
 // UPLOAD IMAGE PREVIEW 
 
 function readURL(input) {
