@@ -38,6 +38,7 @@ $('#userUploadNew').click(function(){
   $('#cameraInput').click();
   $('#uploadDimmer')
     .dimmer('show');
+  $('#imageLoader').dimmer('show');
 })
 
 $('.ui.sticky')
@@ -79,12 +80,17 @@ function readURL(input) {
     };
     reader.readAsDataURL(input.files[0]);
   }
-  $("#imageLoader").toggle();
+  $("#imageLoader").dimmer('hide');
   $('#userSubmit').toggleClass("disabled");
 
 }
 
+// if user hits "cancel" on the uploader, reset everything
 $("#userCancelUpload").click(function(){
   $('#imageLoader').dimmer('hide');
   $('#uploadDimmer').dimmer('hide');
+  $('#userSubmit').toggleClass("disabled");
+  $('#userUploadPreview')
+        .attr('src', "#");
+
 })
