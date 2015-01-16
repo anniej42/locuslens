@@ -80,6 +80,8 @@ function readURL(input) {
     reader.readAsDataURL(input.files[0]);
   }
   $("#imageLoader").toggle();
+  $('#userSubmit').toggleClass("disabled");
+
 }
 
 $("#userCancelUpload").click(function(){
