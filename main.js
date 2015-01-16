@@ -59,6 +59,7 @@ $('#userHighFive').click(function(){
   $('#userHighFive').toggleClass("active");
   if ($('#userHighFive').hasClass("active")){
     $('#numLikes').html(parseInt($('#numLikes').html())+1);
+    $('#numLikesField').transition('pulse');
   } else {
     $('#numLikes').html(parseInt($('#numLikes').html())-1);
   }

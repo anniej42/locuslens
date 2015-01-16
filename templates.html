@@ -14,10 +14,10 @@
     <!-- LIKES  -->
     <div class="timelineLikes">  
       <div class="ui tiny buttons">
-        <div class="ui button"><i class="star icon"></i> </div>
+        <div class="ui toggle button" id="userHighFive"><i class="star icon"></i> </div>
         <div class="or" data-text=" "></div>
-        <div class="ui positive button">
-          <a class="llNameLink" >afuller</a><span> and </span><span class="llRemainingCount" >{{llRemainingCount}}</span> others <span> <i class="heart icon"></i> </span>this.
+        <div class="ui positive button" id="numLikesField">
+          <div class="likes" > <span id="numLikes" mediaId={{{_id}}}>{{likeCount}}</span> <span> <i class="heart icon"></i> </span>this.</div>
         </div>
       </div>
     </div>
@@ -37,14 +37,12 @@
         </div>
       </div>
     </div>
-        
   <!-- END TIMELINECARD -->
   </div>
-
-
+<!-- END TLCARDTEMPLATE -->
 </div> 
 
-  <!-- TAG TEMPLATE -->
+<!-- TAG TEMPLATE -->
 <div class="hidden tagTemplate templates" mediaId="{{{mediaId}}}" commentId="{{{_id}}}">
   <div class="comment">
     <a class="avatar"> <img src="{{{ownerAvatar}}}"> </a> 
