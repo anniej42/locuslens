@@ -81,7 +81,7 @@ function readURL(input) {
     reader.readAsDataURL(input.files[0]);
   }
   $("#imageLoader").dimmer('hide');
-  $('#userSubmit').toggleClass("disabled");
+  $('#userSubmit').removeClass("disabled");
 
 }
 
@@ -89,7 +89,7 @@ function readURL(input) {
 $("#userCancelUpload").click(function(){
   $('#imageLoader').dimmer('hide');
   $('#uploadDimmer').dimmer('hide');
-  $('#userSubmit').toggleClass("disabled");
+  $('#userSubmit').addClass("disabled");
   $('#userUploadPreview')
         .attr('src', "#");
 
