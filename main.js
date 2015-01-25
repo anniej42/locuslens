@@ -99,7 +99,29 @@ $("#userCancelUpload").click(function(){
   $('#imageLoader').dimmer('hide');
   $('#uploadDimmer').dimmer('hide');
   $('#userSubmit').addClass("disabled");
-  $('#userUploadPreview')
-        .attr('src', "#");
+  $('#userUploadPreview').attr('src', "#");
+  $('.input.efx').removeClass("error");
+  $('.input.cfx').removeClass("error");
+
+
+})
+
+$('#userSubmit').click(function(){
+  var efx = $('#uploadEfx');
+  var cfx = $('#uploadCfx');
+
+
+  
+  if (efx.val().length==0 || (cfx.val().length==0)){
+    if (efx.val().length==0){
+      $('.input.efx').addClass("error");
+    }
+    if (cfx.val().length==0){
+      $('.input.cfx').addClass("error");  
+    }
+    
+  } else {
+    // actually submit some stuff
+  }
 
 })

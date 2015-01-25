@@ -297,13 +297,36 @@
             <p></p>
         <div class="ui fluid card">
         <div class="image">
-        <div class="ui inverted dimmer" id="imageLoader">
-          <div class="ui text loader">Loading</div>
-      </div>
+          <div class="ui inverted dimmer" id="imageLoader">
+            <div class="ui text loader">Loading</div>
+          </div>
           <img id="userUploadPreview" src="#" />
         </div>
+
         <div class="content">
-          <div class="ui large buttons">
+          <!-- Form for Efx# and Cfx# -->
+          <div class="ui fluid grid">
+            <div class="eight wide column">
+              <div class="ui mini labeled input efx" id="TEST">
+                <div class="ui label">
+                  Efx#
+                </div>
+                <input type="text" id="uploadEfx" placeholder="English function...">
+              </div>
+            </div>
+            <div class="eight wide column">
+              <div class="ui mini labeled input cfx">
+                <div class="ui label">
+                  Cfx#
+                </div>
+                <input type="text" id="uploadCfx" placeholder="Code function...">
+              </div>
+            </div>
+          </div>
+
+          <div class="ui divider"></div>
+
+          <div class="ui center buttons">
             <div class="ui disabled positive button" id="userSubmit">submit</div>
             <div class="or"></div>
             <div class="ui negative button" id="userCancelUpload">cancel</div>
