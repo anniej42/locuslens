@@ -109,15 +109,15 @@ $("#userCancelUpload").click(function(){
 $('#userSubmit').click(function(){
   var efx = $('#uploadEfx');
   var cfx = $('#uploadCfx');
-
-
   
   if (efx.val().length==0 || (cfx.val().length==0)){
     if (efx.val().length==0){
       $('.input.efx').addClass("error");
+      efx.attr('placeholder', "required");
     }
     if (cfx.val().length==0){
-      $('.input.cfx').addClass("error");  
+      $('.input.cfx').addClass("error");
+      cfx.attr('placeholder', "required");
     }
     
   } else {
